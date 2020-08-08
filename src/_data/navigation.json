@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "text": "Αρχική",
+      "url": "/"
+    },
+    {
+      "text": "Για Εμάς",
+      "url": "/about"
+    },
+    {
+      "text": "Παραστάσεις",
+      "url": "/shows"
+    },
+    {
+      "text": "Εργαστήρια",
+      "url": "/workshops"
+    },
+    {
+      "text": "Σεμινάρια",
+      "url": "/seminars"
+    },
+    {
+      "text": "Tour Dates",
+      "url": "/dates"
+    },
+    {
+      "text": "Gallery",
+      "url": "/gallery"
+    },
+    {
+      "text": "Χορηγοί",
+      "url": "/sponsors"
+    },
+    {
+      "text": "Επικοινωνία",
+      "url": "/contact"
+    }
+  ]
+}
