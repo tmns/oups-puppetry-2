@@ -1,0 +1,23 @@
+{
+  "name": "oups-puppetry-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "npx eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmns/oups-puppetry-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmns/oups-puppetry-2/issues"
+  },
+  "homepage": "https://github.com/tmns/oups-puppetry-2#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
