@@ -2,7 +2,13 @@
 
 {% block content %}
 <article>
-  <h1>{{ title }}</h1>
-  {{ content | safe }}
+  {% for character in heading.characters %}
+  {% include character.svg %}
+  {% endfor %}
+  <h1>{{  heading.title }}</h1>
+</article>
+<article>
+  <h2>{{ intro.title }}</h2>
+  <p>{{ intro.paragraph }}</p>
 </article>
 {% endblock %}
