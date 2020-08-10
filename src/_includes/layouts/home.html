@@ -11,4 +11,8 @@
   <h2>{{ intro.title }}</h2>
   <p>{{ intro.paragraph }}</p>
 </article>
+{% set galleryTitle = gallery.title %}
+{% set galleryParagraph = gallery.paragraph %}
+{% set galleryImages = gallery.images %}
+{% include "partials/gallery.html" %}
 {% endblock %}

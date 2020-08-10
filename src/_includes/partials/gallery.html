@@ -1,0 +1,13 @@
+<article class="gallery">
+  {% if galleryTitle %}
+  <h2>{{ galleryTitle }}</h2>
+  {% endif %}
+
+  {% if galleryParagraph %}
+  <p>{{ galleryParagraph }}</p>
+  {% endif %}
+
+  {% for image in galleryImages %}
+  <img src="{{ image.url }}" alt="{{ image.alt }}" loading="lazy" />
+  {% endfor %}
+</article>
