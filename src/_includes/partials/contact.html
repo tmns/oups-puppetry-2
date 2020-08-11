@@ -1,0 +1,18 @@
+<article class="contact">
+  <h2>{{ contact.title }}</h2>
+  <p>{{ contact.paragraph }}</p>
+  <form name="{{ contact.homeContact }}" method="POST">
+    <!-- netlify hidden input field for spam bots -->
+    <input type="hidden" name="bot-field" />
+    <!-- netlify hidden input field for spam bots -->
+    {% for field in contact.formFields %}
+    <label for="{{ field.name }}">{{ field.name | capitalize }}</label>
+    {% if field.type == "textarea" %}
+    <textarea id="{{ field.name }}" name="{{ field.name }}" rows="5" cols="90" aria-required="{{ field.required }}"></textarea>
+    {% else %}
+    <input type="{{ field.type }}" id="{{ field.name }}" name="{{ field.name }}" aria-required="{{ field.required }}" />
+    {% endif %}
+    {% endfor %}
+    <button type="submit">{{ contact.buttonIcon }}{{ contact.buttonText }}</button>
+  </form>
+</article> 
