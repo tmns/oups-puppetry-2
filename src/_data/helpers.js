@@ -20,4 +20,14 @@ module.exports = {
 
     return response
   },
+
+  /**
+   * Tiny helper function to get the current year.
+   * Used for the copyright blurb in the footer.
+   * 
+   * @returns {String} The current year
+   */
+  getFullYear() {
+    return new Date().getFullYear();
+  }
 }
