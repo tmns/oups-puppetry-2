@@ -7,7 +7,17 @@
   <p>{{ galleryParagraph }}</p>
   {% endif %}
 
-  {% for image in galleryImages %}
-  <img src="{{ image.url }}" alt="{{ image.alt }}" loading="lazy" />
-  {% endfor %}
+  <ul class="auto-grid">
+    {% for image in galleryImages %}
+    <li>
+      <img
+        class="[ gallery__image ]" 
+        src="{{ image.url }}" 
+        alt="{{ image.alt }}" 
+        draggable="false"
+        loading="lazy" 
+      />
+    </li>
+    {% endfor %}  
+  </ul>
 </article>
