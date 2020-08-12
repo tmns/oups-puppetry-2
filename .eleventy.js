@@ -9,6 +9,11 @@ module.exports = (config) => {
       .sort((a, b) => (Number(a.fileSlug) > Number(b.fileSlug) ? 1 : -1))
   )
 
+  // Returns a list of shows ordered by filename
+  config.addCollection('shows', (collection) =>
+    collection.getFilteredByGlob('./src/shows/*.md')
+  )
+
   return {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
