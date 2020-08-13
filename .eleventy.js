@@ -15,7 +15,7 @@ module.exports = (config) => {
       .sort((a, b) => (Number(a.fileSlug) > Number(b.fileSlug) ? 1 : -1))
   )
 
-  // Returns a list of shows ordered by filename
+  // Returns a list of workshops ordered by filename
   config.addCollection('workshops', (collection) =>
     collection.getFilteredByGlob('./src/workshops/*.md')
       .sort((a, b) => (Number(a.fileSlug) > Number(b.fileSlug) ? 1 : -1))
