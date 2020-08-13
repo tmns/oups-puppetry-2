@@ -1,0 +1,23 @@
+{% set artifact = item.data %}
+<article class="artifact">
+  <h2>{{ artifact.name }}</h2>
+  {% if artifact.subtitle %}
+  <h3>{{ artifact.subtitle }}</h3>
+  {% endif %}
+  <p>{{ artifact.description }}</p>
+  {% if artifact.duration %}
+  <p>Διάρκεια: {{ artifact.duration }}</p>
+  {% endif %}
+  {% if artifact.music %}
+  <p>Μουσική: {{ artifact.music }}</p>
+  {% endif %}
+  {% if artifact.materials %}
+  <p>Τεχνιτή: {{ artifact.materials }}</p>
+  {% endif %}                              
+  {% if artifact.ages %}
+  <p>Ηλικίες: {{ artifact.ages }}</p>
+  {% endif %}
+  <h4>Φωτογραφίες</h4>
+  {% set galleryImages = artifact.gallery %}
+  {% include "partials/gallery.html" %}
+</article>
