@@ -12,6 +12,13 @@ module.exports = (config) => {
   // Returns a list of shows ordered by filename
   config.addCollection('shows', (collection) =>
     collection.getFilteredByGlob('./src/shows/*.md')
+      .sort((a, b) => (Number(a.fileSlug) > Number(b.fileSlug) ? 1 : -1))
+  )
+
+  // Returns a list of shows ordered by filename
+  config.addCollection('workshops', (collection) =>
+    collection.getFilteredByGlob('./src/workshops/*.md')
+      .sort((a, b) => (Number(a.fileSlug) > Number(b.fileSlug) ? 1 : -1))
   )
 
   return {
