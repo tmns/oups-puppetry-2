@@ -1,5 +1,5 @@
 ---
-title: 'Oups! The Puppet Theater: Home'
+title: 'Home - Oups! The Puppet Theater'
 layout: 'layouts/home.html'
 heading:
   title: 'Oups! The Puppet Theater'

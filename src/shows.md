@@ -1,5 +1,5 @@
 ---
-title: 'Oups! The Puppet Theater Shows'
+title: 'Shows - Oups! The Puppet Theater'
 layout: 'layouts/shows.html'
 permalink: '/shows/index.html'
 ---
