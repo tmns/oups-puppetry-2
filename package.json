@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tmns/oups-puppetry-2#readme",
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "moment": "^2.27.0"
   }
 }
