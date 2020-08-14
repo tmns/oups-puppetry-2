@@ -21,6 +21,12 @@ module.exports = (config) => {
       .sort((a, b) => (Number(a.fileSlug) > Number(b.fileSlug) ? 1 : -1))
   )
 
+  // Returns a list of seminars ordered by filename
+  config.addCollection('seminars', (collection) =>
+    collection.getFilteredByGlob('./src/seminars/*.md')
+      .sort((a, b) => (Number(a.fileSlug) > Number(b.fileSlug) ? 1 : -1))
+  )
+
   return {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',

@@ -1,0 +1,19 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = content %}
+{% set pageHeaderIntro = intro %}
+{% set seminarItems = collections.seminars %}
+
+{% block content %}
+  <article class="seminars">
+    {% include "partials/page-header.html" %}
+    {% if seminarItems %}
+    <div class="wrapper">
+      {% for item in seminarItems %}
+      {% include "partials/artifact.html" %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </article>
+{% endblock %}
