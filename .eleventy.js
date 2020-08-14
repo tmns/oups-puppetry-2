@@ -1,3 +1,6 @@
+const dateFilter = require('./src/filters/date-filter.js')
+const w3DateFilter = require('./src/filters/w3-date-filter.js')
+
 module.exports = (config) => {
   // Set directories to pass through to the dist folder
   config.addPassthroughCopy('./src/images/')
@@ -26,6 +29,15 @@ module.exports = (config) => {
     collection.getFilteredByGlob('./src/seminars/*.md')
       .sort((a, b) => (Number(a.fileSlug) > Number(b.fileSlug) ? 1 : -1))
   )
+
+  config.addCollection('tourDates', (collection) =>
+    collection.getFilteredByGlob('./src/tour-dates/*.md')
+      .sort((a, b) => (Number(a.fileSlug) > Number(b.fileSlug) ? 1 : -1))
+  )
+
+  // Add filters
+  config.addFilter('dateFilter', dateFilter)
+  config.addFilter('w3DateFilter', w3DateFilter)
 
   return {
     markdownTemplateEngine: 'njk',
