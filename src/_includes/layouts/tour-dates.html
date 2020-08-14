@@ -1,0 +1,39 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = content %}
+{% set tourDateItems = collections.tourDates %}
+
+{% block content %}
+  <article class="tourDates">
+    {% include "partials/page-header.html" %}
+    {% if tourDateItems %}
+    <div class="wrapper">
+      {% for item in tourDateItems %}
+      <article class="tourDate-item">
+        <h2>Πώς λέγεται; {{ item.data.title }}</h2>
+        <h3>Τι είναι; {{ item.data.type }}</h3>
+        {% if item.data.image %}
+        <img 
+          src="{{ item.data.image }}"
+          alt="{{ item.data.imageAlt }}"
+          draggable="false"
+          loading="lazy"
+        />
+        {% endif %}
+        <p>Τι θα χει; {{ item.data.description }}</p>
+        <p>Πότε;<br>
+        <time datetime="{{ item.data.date | w3DateFilter }}">{{ item.data.date | dateFilter }}</time>
+        <time datetime="{{ item.data.time }}">{{ item.data.time }}</time>
+        </p>
+        <p>Που; {{ item.data.location }}</p>
+        <p>Πόσο; {{ item.data.price }}</p>
+        {% if item.data.video %}
+        {# Do something #}
+        {% endif %}
+      </article>  
+      {% endfor %}
+    </div>
+    {% endif %}
+  </article>
+{% endblock %}
