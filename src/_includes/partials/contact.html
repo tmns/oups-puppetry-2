@@ -1,6 +1,10 @@
 <article class="contact">
+  {% if contact.title %}
   <h2>{{ contact.title }}</h2>
+  {% endif %}
+  {% if contact.paragraph %}
   <p>{{ contact.paragraph }}</p>
+  {% endif %}
   <form name="{{ contact.homeContact }}" method="POST">
     <!-- netlify hidden input field for spam bots -->
     <input type="hidden" name="bot-field" />
@@ -15,4 +19,5 @@
     {% endfor %}
     <button type="submit">{{ contact.buttonIcon }}{{ contact.buttonText }}</button>
   </form>
+  <img src="{{ contact.image }}" alt="{{ contact.imageAlt }}" draggable="false" loading="lazy" />
 </article> 
