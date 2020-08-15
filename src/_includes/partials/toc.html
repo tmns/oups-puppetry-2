@@ -1,0 +1,8 @@
+<nav class="toc" aria-labeledby="toc-title">
+  <span id="toc-title" aria-hidden="true">table of contents</span>
+  <ul>
+    {% for item in navItems %}
+    <li><a href="#{{ item.data.name | replace(' ', '-') | lower }}">{{ item.data.name }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
