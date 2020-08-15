@@ -1,8 +1,8 @@
 ---
-title: 'Logo - Oups! The Puppet Theater'
+title: 'Logo'
 layout: 'layouts/logo.html'
 permalink: '/logo/index.html'
-headerTitle: 'Logo'
+metaDesc: 'Δείτε όλα τα λογότυπα του ΟΥΠΣ!'
 images:
   - url: '/images/logo/1.jpg'
     alt: ''

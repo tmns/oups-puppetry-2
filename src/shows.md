@@ -1,8 +1,8 @@
 ---
-title: 'Shows - Oups! The Puppet Theater'
+title: 'Παραστάσεις'
 layout: 'layouts/with-toc.html'
 permalink: '/shows/index.html'
-headerTitle: 'Παραστάσεις'
+metaDesc: 'Δείτε πλροφορίες και φωτογραφίες σχετικές με τις παραστάσεις του ΟΥΠΣ!'
 collection: 'shows'
 ---
 

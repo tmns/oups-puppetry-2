@@ -1,6 +1,7 @@
 ---
-title: 'Home - Oups! The Puppet Theater'
+title: 'Home'
 layout: 'layouts/home.html'
+metaDesc: 'Καλώς ήρθατε στο ψηφιακό καταφύγιο του ΟΥΠΣ! του κουκλοθεάτρου.'
 heading:
   title: 'Oups! The Puppet Theater'
 intro:

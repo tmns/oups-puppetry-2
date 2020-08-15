@@ -1,8 +1,8 @@
 ---
-title: 'Tour Dates - Oups! The Puppet Theater'
+title: 'Tour Dates'
 layout: 'layouts/tour-dates.html'
 permalink: '/tour-dates/index.html'
-headerTitle: 'Tour Dates'
+metaDesc: 'Ενημερωθείτε για τις επερχόμενες εκδηλώσεις του ΟΥΠΣ!'
 ---
 
 Ετοιμαστείτε για μια επίσκεψη... 

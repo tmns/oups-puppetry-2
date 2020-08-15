@@ -1,8 +1,8 @@
 ---
-title: 'Sponsors - Oups! The Puppet Theater'
+title: 'Χορηγοί'
 layout: 'layouts/sponsors.html'
 permalink: '/sponsors/index.html'
-headerTitle: 'Χορηγοί'
+metaDesc: 'Δείτε τους χορηγούς του ΟΥΠΣ!'
 images:
   - url: '/images/sponsors/1.jpg'
     alt: ''

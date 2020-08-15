@@ -1,8 +1,8 @@
 ---
-title: 'Workshops - Oups! The Puppet Theater'
+title: 'Εργαστήρια'
 layout: 'layouts/with-toc.html'
 permalink: '/workshops/index.html'
-headerTitle: 'Εργαστήρια'
+metaDesc: 'Δείτε πλροφορίες και φωτογραφίες σχετικές με τα εργαστήρια του ΟΥΠΣ!'
 collection: 'workshops'
 ---
 

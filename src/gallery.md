@@ -1,8 +1,8 @@
 ---
-title: 'Gallery - Oups! The Puppet Theater'
+title: 'Gallery'
 layout: 'layouts/gallery.html'
 permalink: '/gallery/index.html'
-headerTitle: 'Gallery'
+metaDesc: 'Δείτε φωτογραφίες και βίντεο από όλες τις περιπέτειες του ΟΥΠΣ!'
 images:
   - url: '/images/gallery/1.jpg'
     alt: ''

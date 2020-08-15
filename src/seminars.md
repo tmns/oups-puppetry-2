@@ -1,8 +1,8 @@
 ---
-title: 'Seminars - Oups! The Puppet Theater'
+title: 'Σεμινάρια'
 layout: 'layouts/with-toc.html'
 permalink: '/seminars/index.html'
-headerTitle: 'Σεμινάρια'
+metaDesc: 'Δείτε πλροφορίες και φωτογραφίες σχετικές με τα σεμινάρια του ΟΥΠΣ!'
 collection: 'seminars'
 intro: 'Το ΟΥΠΣ! το κουκλοθέατρο και η κουκλοπαίχτρια και εμψυχώτρια Αγγελική Γουναρίδη παρουσιάζει σεμινάρια για ενήλικες που σκοπό έχουν να ξεκλειδώσουν τα μυστικά του παιχνιδιού και του κουκλοθέατρου.
 

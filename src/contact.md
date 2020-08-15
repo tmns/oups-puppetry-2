@@ -1,8 +1,8 @@
 ---
-title: 'Contact - Oups! The Puppet Theater'
+title: 'Επικοινωνία'
 layout: 'layouts/contact.html'
 permalink: '/contact/index.html'
-headerTitle: 'Επικοινωνία'
+metaDesc: 'Επικοινωνήστε μαζί με το ΟΥΠΣ!'
 contact: 
   formName: 'contact-page-contact'
   formFields:
