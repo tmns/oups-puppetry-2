@@ -33,12 +33,12 @@
       "url": "/logo"
     },
     {
-      "text": "Χορηγοί",
-      "url": "/sponsors"
-    },
-    {
       "text": "Επικοινωνία",
       "url": "/contact"
+    },
+    {
+      "text": "Χορηγοί",
+      "url": "/sponsors"
     }
   ]
 }
