@@ -2,6 +2,7 @@
 title: 'Gallery - Oups! The Puppet Theater'
 layout: 'layouts/gallery.html'
 permalink: '/gallery/index.html'
+headerTitle: 'Gallery'
 images:
   - url: '/images/gallery/1.jpg'
     alt: ''

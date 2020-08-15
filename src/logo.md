@@ -1,6 +1,8 @@
 ---
 title: 'Logo - Oups! The Puppet Theater'
 layout: 'layouts/logo.html'
+permalink: '/logo/index.html'
+headerTitle: 'Logo'
 images:
   - url: '/images/logo/1.jpg'
     alt: ''

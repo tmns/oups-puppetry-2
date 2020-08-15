@@ -2,6 +2,7 @@
 title: 'Sponsors - Oups! The Puppet Theater'
 layout: 'layouts/sponsors.html'
 permalink: '/sponsors/index.html'
+headerTitle: 'Χορηγοί'
 images:
   - url: '/images/sponsors/1.jpg'
     alt: ''

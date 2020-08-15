@@ -2,6 +2,7 @@
 title: 'Contact - Oups! The Puppet Theater'
 layout: 'layouts/contact.html'
 permalink: '/contact/index.html'
+headerTitle: 'Επικοινωνία'
 contact: 
   formName: 'contact-page-contact'
   formFields:
