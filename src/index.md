@@ -73,6 +73,6 @@ contact:
       required: 'true'
   buttonIcon: ''
   buttonText: 'Αποστολή'
-  image: '/images/shared/main-logo.svg'
+  image: '/images/shared/logo-transparent.png'
   imageAlt: 'The Oups monster peeking out of a wind up box with Oups! The Puppet Theater written on the box.'
 ---
