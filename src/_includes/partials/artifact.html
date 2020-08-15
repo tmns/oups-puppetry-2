@@ -1,9 +1,13 @@
 {% set artifact = item.data %}
 <article class="artifact">
-  <h2>{{ artifact.name }}</h2>
-  {% if artifact.subtitle %}
-  <h3>{{ artifact.subtitle }}</h3>
-  {% endif %}
+  <div class="artifact-section-header">
+    {% set linkId = artifact.name | replace(' ', '-') | lower %}
+    <h2 id="{{ linkId }}" tabindex="-1">{{ artifact.name }}</h2>
+    <a href="#{{ linkId }}" aria-label="link to {{ artifact.name }}">#</a>
+    {% if artifact.subtitle %}
+    <h3>{{ artifact.subtitle }}</h3>
+    {% endif %}
+  </div>
   <p>{{ artifact.description }}</p>
   {% if artifact.duration %}
   <p>Διάρκεια: {{ artifact.duration }}</p>
