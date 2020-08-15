@@ -1,8 +1,9 @@
 ---
 title: 'Contact - Oups! The Puppet Theater'
 layout: 'layouts/contact.html'
-formName: 'contact-page-contact'
+permalink: '/contact/index.html'
 contact: 
+  formName: 'contact-page-contact'
   formFields:
     - name: 'όνομα'
       type: 'text'

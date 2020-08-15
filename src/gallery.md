@@ -1,6 +1,7 @@
 ---
 title: 'Gallery - Oups! The Puppet Theater'
 layout: 'layouts/gallery.html'
+permalink: '/gallery/index.html'
 images:
   - url: '/images/gallery/1.jpg'
     alt: ''

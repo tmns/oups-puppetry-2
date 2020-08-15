@@ -3,15 +3,6 @@ title: 'Home - Oups! The Puppet Theater'
 layout: 'layouts/home.html'
 heading:
   title: 'Oups! The Puppet Theater'
-  characters:
-    - svg: 'partials/characters/1.svg'
-    - svg: 'partials/characters/2.svg'
-    - svg: 'partials/characters/3.svg'
-    - svg: 'partials/characters/4.svg'
-    - svg: 'partials/characters/5.svg'
-    - svg: 'partials/characters/6.svg'
-    - svg: 'partials/characters/7.svg'
-    - svg: 'partials/characters/8.svg'
 intro:
   title: 'Το OUPS! τί πάει να πει;'
   paragraph: 'Η ζωές μας είναι γεμάτες ΟΥΠΣ! Αναπάντεχες καταστασεις που μας κρατάνε πάντα σε εγρήγορση. Με την καρδιά ανοιχτή ψαχνουμε την χαρά σε όσα ΟΥΠΣ! Και αν προκύψουν και τα μεταμορφώνουμε σε γνώση και παιχνίδι. Έσύ πόσα ΟΥΠΣ! έχεις κάνει σήμερα?!'

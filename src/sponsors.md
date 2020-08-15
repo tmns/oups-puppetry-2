@@ -1,6 +1,7 @@
 ---
 title: 'Sponsors - Oups! The Puppet Theater'
 layout: 'layouts/sponsors.html'
+permalink: '/sponsors/index.html'
 images:
   - url: '/images/sponsors/1.jpg'
     alt: ''
