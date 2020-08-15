@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = headerTitle %}
+{% set pageHeaderSummary = content %}
+{% set collectionItems = collections[collection] %}
+
+{% block content %}
+  {% block tocData %}{% endblock %}
+  <article class="{{ collection }}">
+    {% include "partials/page-header.html" %}
+    {% if collectionItems %}
+    <div class="wrapper">
+      {% set navItems = collectionItems %}
+      {% include "partials/toc.html" %}
+      {% for item in collectionItems %}
+      {% include "partials/artifact.html" %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </article>
+{% endblock %}
