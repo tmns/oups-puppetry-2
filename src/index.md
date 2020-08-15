@@ -60,7 +60,7 @@ newsletter:
 contact:
   title: 'Γράψτε μας κάτι'
   paragraph: 'Προσβλέπουμε στο μήνυμά σας!'
-  formName: 'homeContact'
+  formName: 'home-contact'
   formFields:
     - name: 'όνομα'
       type: 'text'
