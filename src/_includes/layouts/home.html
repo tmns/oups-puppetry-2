@@ -2,8 +2,8 @@
 
 {% block content %}
 <article>
-  {% for character in heading.characters %}
-  {% include character.svg %}
+  {% for character in characters.items %}
+  <a href="{{ character.url }}">{% include character.svg %}</a>
   {% endfor %}
   <h1>{{  heading.title }}</h1>
 </article>

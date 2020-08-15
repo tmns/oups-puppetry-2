@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "svg": "partials/characters/1.svg",
+      "url": "/gallery",
+      "permalink": "/gallery/index.html"
+    },
+    {
+      "svg": "partials/characters/2.svg",
+      "url": "/workshops",
+      "permalink": "/workshops/index.html"
+    },
+    {
+      "svg": "partials/characters/3.svg",
+      "url": "/shows",
+      "permalink": "/shows/index.html"
+    },
+    {
+      "svg": "partials/characters/4.svg",
+      "url": "/seminars",
+      "permalink": "/seminars/index.html"
+    },
+    {
+      "svg": "partials/characters/5.svg",
+      "url": "/logo",
+      "permalink": "/logo/index.html"
+    },
+    {
+      "svg": "partials/characters/6.svg",
+      "url": "/contact",
+      "permalink": "/contact/index.html"
+    },
+    {
+      "svg": "partials/characters/7.svg",
+      "url": "/tour-dates",
+      "permalink": "/tour-dates/index.html"
+    },
+    {
+      "svg": "partials/characters/8.svg",
+      "url": "/about-us",
+      "permalink": "/about-us/index.html"
+    }
+  ]
+}
