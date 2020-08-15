@@ -1,0 +1,22 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = content %}
+
+{% block content %}
+  <article class="gallery">
+    <div class="gallery-photos">
+      <h2>Φωτογραφίες</h2>
+      {% set galleryImages = images %}
+      {% include "partials/gallery.html" %}
+    </div>
+    <div class="gallery-videos">
+      <h2>Βίντεο</h2>
+      <ul class="gallery-videos__list">
+        {% for video in videos %}
+        <li><lite-youtube videoid="{{ video.id }}"></lite-youtube></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </article>
+{% endblock %}
