@@ -5,17 +5,18 @@
   {% if contact.paragraph %}
   <p>{{ contact.paragraph }}</p>
   {% endif %}
-  <form name="{{ contact.homeContact }}" method="POST">
+  <form name="{{ contact.homeContact }}" method="POST" novalidate="true">
     <!-- netlify hidden input field for spam bots -->
     <input type="hidden" name="bot-field" />
     <!-- netlify hidden input field for spam bots -->
     {% for field in contact.formFields %}
     <label for="{{ field.name }}">{{ field.name | capitalize }}</label>
     {% if field.type == "textarea" %}
-    <textarea id="{{ field.name }}" name="{{ field.name }}" rows="5" cols="90" aria-required="{{ field.required }}"></textarea>
+    <textarea id="{{ field.name }}" name="{{ field.name }}" rows="5" cols="90" aria-describedby="{{ field.name }}-error" aria-required="{{ field.required }}"></textarea>
     {% else %}
-    <input type="{{ field.type }}" id="{{ field.name }}" name="{{ field.name }}" aria-required="{{ field.required }}" />
+    <input type="{{ field.type }}" id="{{ field.name }}" name="{{ field.name }}" aria-describedy="{{ field.name }}-error" aria-required="{{ field.required }}" />
     {% endif %}
+    <div id="{{ field.name }}-error"></div>
     {% endfor %}
     <button type="submit">{{ contact.buttonIcon }}{{ contact.buttonText }}</button>
   </form>
