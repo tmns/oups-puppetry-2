@@ -1,0 +1,11 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = content %}
+
+{% block content %}
+  <article class="sponsors">
+    {% set galleryImages = images %}
+    {% include "partials/gallery.html" %}
+  </article>
+{% endblock %}
