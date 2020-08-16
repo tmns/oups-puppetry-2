@@ -39,6 +39,9 @@ module.exports = (config) => {
   config.addFilter('dateFilter', dateFilter)
   config.addFilter('w3DateFilter', w3DateFilter)
 
+  // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
+  config.setUseGitIgnore(false);
+
   return {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
