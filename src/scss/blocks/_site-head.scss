@@ -1,0 +1,31 @@
+.site-head {
+  padding: get-size('600') 0;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__brand {
+    flex-shrink: 0;
+    margin-inline-end: get-size('600');
+
+    svg {
+      width: 80px;
+    }
+  }
+
+  &__nav {
+    padding: get-size('300') 0;
+  }
+
+  @include media-query('md') {
+    &__brand {
+      svg {
+        width: 105px;
+      }
+    }
+  }
+}
