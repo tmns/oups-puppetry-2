@@ -8,10 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     {% include "partials/meta-info.html" %}
 
-    {% if title === 'Gallery' %}
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@0.6.2/lite-youtube.js">
-    {% endif %}
-
     <style>{% include "css/critical.css" %}</style>
     
     {# Add facility for pages to delare an array of critical styles #}
@@ -28,6 +24,10 @@
       {% for item in pageStylesheets %}
       <link rel="stylesheet" media="print" href="{{ item }}?{{ assetHash }}" onload="this.media='all'" />
       {% endfor %}
+    {% endif %}
+
+    {% if title === 'Gallery' %}
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@0.6.2/lite-youtube.js">
     {% endif %}
   </head>
   <body>
