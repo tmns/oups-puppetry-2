@@ -31,10 +31,14 @@
     {% endif %}
   </head>
   <body>
-    {% include "partials/site-head.html" %}
-    <main tabindex="-1" id="main-content">
-      {% block content %}{% endblock %}
-    </main>
-    {% include "partials/footer.html" %}
+    <div class="site-wrap">
+      {% include "partials/site-head.html" %}
+
+      <main tabindex="-1" id="main-content">
+        {% block content %}{% endblock %}
+      </main>
+
+      {% include "partials/footer.html" %}
+    </div>
   </body>
 </html>
