@@ -1,12 +1,9 @@
 {% extends "layouts/base.html" %}
 
+{% set pageHeaderTitle = heading.title %}
+
 {% block content %}
-<article>
-  {% for character in characters.items %}
-  <a href="{{ character.url }}">{% include character.svg %}</a>
-  {% endfor %}
-  <h1 class="[ font-sans ]">{{  heading.title }}</h1>
-</article>
+{% include "partials/page-header.html" %}
 <article>
   <h2>{{ intro.title }}</h2>
   <p>{{ intro.paragraph }}</p>

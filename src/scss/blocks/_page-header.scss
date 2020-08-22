@@ -1,0 +1,30 @@
+.page-header {
+  position: relative;
+
+  .characters {
+    display: flex;
+    position: absolute;
+    top: -205px;
+    right: -40px;
+    z-index: 0;
+  }
+
+  .character {
+    // width: 11vw;
+    // height: 30vh;
+  }
+
+  &__heading {
+    position: relative;
+    z-index: 1;
+    margin: 20rem 0 5rem;
+    border: 5px solid get-color('dark');
+    transform: rotate(-2deg);
+    text-align: center;
+  }
+  
+  .headline {
+    padding: 5vh 5vw;
+    font-size: 5vw;
+  }
+}
