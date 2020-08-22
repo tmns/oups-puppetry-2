@@ -33,5 +33,9 @@
         background: get-color('quinary-glare');
       }
     }
+
+    &:hover {
+      transform: rotate(-3deg);
+    }
   }
 }
