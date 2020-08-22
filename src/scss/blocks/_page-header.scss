@@ -1,30 +1,43 @@
 .page-header {
-  position: relative;
+  margin-top: 20vw;
+
+  @include media-query('lg') {
+    margin-top: 8vw;
+  }
 
   .characters {
-    display: flex;
-    position: absolute;
-    top: -205px;
-    right: -40px;
-    z-index: 0;
+    display: none;
+
+    @include media-query('lg') {
+      display: flex;
+    }
   }
 
   .character {
-    // width: 11vw;
-    // height: 30vh;
+    flex: 1 1 auto;
+    
+    svg {
+      max-width: 8vw;
+    }
+
+    &:nth-child(2) {
+      margin-top: -2vw;
+    }
+
+    &:nth-child(n + 3) {
+      margin-top: -3vw;
+    }
   }
 
   &__heading {
-    position: relative;
-    z-index: 1;
-    margin: 20rem 0 5rem;
+    margin: -9rem 0 5rem;
     border: 5px solid get-color('dark');
     transform: rotate(-2deg);
     text-align: center;
   }
   
   .headline {
-    padding: 5vh 5vw;
+    padding: 5vh 0;
     font-size: 5vw;
   }
 }
