@@ -1,8 +1,8 @@
 <div class="[ page-header ]">
   <div>
     {% for character in characters.items %}
-    {% if character.url == page.url %}
-    {% include character.svg %}
+    {% if character.url == '/' or character.url == page.url %}
+    <a href="{{ character.url }}">{% include character.svg %}</a>
     {% endif %}
     {% endfor %}
     <h1 class="[ page-header__heading ] [ headline ]">{{ pageHeaderTitle }}</h1>
