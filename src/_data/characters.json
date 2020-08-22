@@ -2,43 +2,35 @@
   "items": [
     {
       "svg": "partials/characters/1.svg",
-      "url": "/gallery",
-      "permalink": "/gallery/index.html"
+      "url": "/gallery/"
     },
     {
       "svg": "partials/characters/2.svg",
-      "url": "/workshops",
-      "permalink": "/workshops/index.html"
+      "url": "/workshops/"
     },
     {
       "svg": "partials/characters/3.svg",
-      "url": "/shows",
-      "permalink": "/shows/index.html"
+      "url": "/shows/"
     },
     {
       "svg": "partials/characters/4.svg",
-      "url": "/seminars",
-      "permalink": "/seminars/index.html"
+      "url": "/seminars/"
     },
     {
       "svg": "partials/characters/5.svg",
-      "url": "/logo",
-      "permalink": "/logo/index.html"
+      "url": "/logo/"
     },
     {
       "svg": "partials/characters/6.svg",
-      "url": "/contact",
-      "permalink": "/contact/index.html"
+      "url": "/contact/"
     },
     {
       "svg": "partials/characters/7.svg",
-      "url": "/tour-dates",
-      "permalink": "/tour-dates/index.html"
+      "url": "/tour-dates/"
     },
     {
       "svg": "partials/characters/8.svg",
-      "url": "/about-us",
-      "permalink": "/about-us/index.html"
+      "url": "/about-us/"
     }
   ]
 }

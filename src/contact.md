@@ -1,7 +1,6 @@
 ---
 title: 'Επικοινωνία'
 layout: 'layouts/contact.html'
-permalink: '/contact/index.html'
 metaDesc: 'Επικοινωνήστε μαζί με το ΟΥΠΣ!'
 contact: 
   formName: 'contact-page-contact'

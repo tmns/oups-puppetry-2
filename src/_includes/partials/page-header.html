@@ -1,7 +1,7 @@
 <div class="[ page-header ]">
   <div>
     {% for character in characters.items %}
-    {% if permalink and character.permalink == permalink %}
+    {% if character.url == page.url %}
     {% include character.svg %}
     {% endif %}
     {% endfor %}

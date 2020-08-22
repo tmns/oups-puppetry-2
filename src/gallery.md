@@ -1,7 +1,6 @@
 ---
 title: 'Gallery'
 layout: 'layouts/gallery.html'
-permalink: '/gallery/index.html'
 metaDesc: 'Δείτε φωτογραφίες και βίντεο από όλες τις περιπέτειες του ΟΥΠΣ!'
 images:
   - url: '/images/gallery/1.jpg'
