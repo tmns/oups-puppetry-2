@@ -1,0 +1,33 @@
+.button {
+  @extend .radius;
+
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  background: get-color('quaternary-glare');
+  color: get-color('dark-shade');
+  border: 3px solid get-color('tertiary-glare');
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 3px 3px 0 get-color('tertiary-glare');
+  transition: all .05s ease-in;
+  cursor: pointer;
+
+  @include apply-utility('font', 'sans');
+  @include apply-utility('weight', 'bold');
+
+  &:hover {
+  // Make sure hover state trumps all variants with important
+    background: get-color('quaternary') !important;
+    color: get-color('dark-shade') !important;
+
+    box-shadow: 2px 2px 0 get-color('tertiary-glare');
+    transform: translate(2px, 2px);
+  }
+
+  // Add a ghost modifier
+  &[data-variant='ghost'] {
+    background: transparent;
+    color: get-color('quaternary-glare');
+  }
+}
