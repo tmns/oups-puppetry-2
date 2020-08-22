@@ -10,22 +10,29 @@
 
     @include media-query('lg') {
       display: flex;
+      justify-content: center;
     }
   }
 
   .character {
-    flex: 1 1 auto;
-    
-    svg {
-      max-width: 8vw;
+    &:only-of-type {
+      margin: -3vw 0 2vw;
     }
 
-    &:nth-child(2) {
-      margin-top: -2vw;
-    }
+    &:not(:only-of-type) {
+      flex: 1 1 auto;
+      
+      &:nth-child(2) {
+        margin-top: -2vw;
+      }
+  
+      &:nth-child(n + 3) {
+        margin-top: -3vw;
+      }
 
-    &:nth-child(n + 3) {
-      margin-top: -3vw;
+      svg {
+        max-width: 8vw;
+      }
     }
   }
 
