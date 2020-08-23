@@ -9,9 +9,11 @@
         <div class="nav__list">
           <ul>
             {% for item in navigation.items %}
-            <li class="{{'nav__list-item-hidden' if item.inMoreMenu}}">
+            {% if not item.inMoreMenu %}
+            <li>
               <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
             </li>
+            {% endif %}
             {% endfor %}
           </ul>
         </div>
@@ -23,9 +25,9 @@
               <span aria-hidden="true">▾</span>
             </span>
           </a>
-        </div>
+        </div>        
       </nav>
-      <div id="nav__more" class="nav__more">
+      <div id="nav__more" class="nav__more" style="display: none;">
         <ul class="nav__more-list">
           {% for item in navigation.items %}
           <li class="{{'nav__more-item-hidden' if not item.inMoreMenu}}">
