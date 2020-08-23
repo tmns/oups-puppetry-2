@@ -40,5 +40,63 @@
 
       {% include "partials/footer.html" %}
     </div>
+    {# Some Javascript necessary for the responsive nav #}
+    <script>
+      var moreMenuLink = document.querySelector('.nav__more-option a');
+      var moreMenuTarget = document.querySelector('.nav__more');
+      var firstMenuItem = moreMenuTarget.querySelector('a[href], button:not([disabled]), input');
+      
+      moreMenuLink.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Toggle expanded state
+        var expanded = moreMenuLink.getAttribute('aria-expanded') === 'true' || false;
+        moreMenuLink.setAttribute('aria-expanded', !expanded);
+
+        // Toggle open state
+        var open = moreMenuTarget.style.display === 'block' || false;
+        moreMenuTarget.style.display = open ? 'none' : 'block'
+
+        // Move focus to the expanded menu
+        if (!open) {
+          firstMenuItem.focus();
+        }
+      });
+
+      // Ensure link behaves like a <button> by activating click events on SPACE
+      moreMenuLink.addEventListener('keydown', function(e) {
+        if (e.keyCode === 32) {
+          e.preventDefault();
+          moreMenuLink.click();
+        }
+      });
+
+      if ('IntersectionObserver' in window) {
+        var links = document.querySelector('.nav__list');
+        var items = links.querySelectorAll('li');
+
+        var observerSettings = {
+          root: links,
+          threshold: 0.98
+        };
+
+        var callback = function(items, observer) {
+          Array.prototype.forEach.call(items, function(item) {
+            // Change visibility and availability of menu items
+            // depending on whether they are intersecting
+            if (item.intersectionRatio > 0.98) {
+              item.target.classList.remove('nav__list-item-hidden');
+            } else {
+              item.target.classList.add('nav__list-item-hidden');
+            }
+          });
+        };
+
+        var observer = new IntersectionObserver(callback, observerSettings);
+        Array.prototype.forEach.call(items, function(item) {
+          observer.observe(item);
+        });
+      }
+    </script>
   </body>
 </html>

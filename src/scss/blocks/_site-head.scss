@@ -2,6 +2,7 @@
   padding: get-size('800') 0;
 
   &__inner {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

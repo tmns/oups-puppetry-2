@@ -6,14 +6,34 @@
         {% include "partials/brand.svg" %}
       </a>
       <nav class="[ nav ] [ site-head__nav ]" aria-label="Primary">
-        <ul class="nav__list">
+        <div class="nav__list">
+          <ul>
+            {% for item in navigation.items %}
+            <li class="{{'nav__list-item-hidden' if item.inMoreMenu}}">
+              <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="nav__more-option">
+          <a href="#nav__more" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="visually-hidden">Άλλα</span>
+            <span class="nav__more-option-text" aria-hidden="true">
+              Άλλα
+              <span aria-hidden="true">▾</span>
+            </span>
+          </a>
+        </div>
+      </nav>
+      <div id="nav__more" class="nav__more">
+        <ul class="nav__more-list">
           {% for item in navigation.items %}
-          <li>
-            <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+          <li class="{{'nav__more-item-hidden' if not item.inMoreMenu}}">
+            <a href="{{ item.url }}">{{ item.text }}</a>
           </li>
           {% endfor %}
         </ul>
-      </nav>
-    </div>
+      </div>  
+    </div>  
   </div>
 </header>

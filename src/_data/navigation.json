@@ -38,7 +38,8 @@
     },
     {
       "text": "Χορηγοί",
-      "url": "/sponsors"
+      "url": "/sponsors",
+      "inMoreMenu": true
     }
   ]
 }
