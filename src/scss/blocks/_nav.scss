@@ -1,12 +1,15 @@
 .nav {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  position: relative;
   line-height: 1;
   font-weight: 900;
   margin-top: -#{get-size('400')};
   margin-inline-start: -#{get-size('400')};
 
   &__list {
+    overflow-x: hidden;
+
     ul {
       display: flex;
       list-style: none;
@@ -14,7 +17,7 @@
       > * {
         padding-top: get-size('400');
         padding-inline-start: get-size('400');
-      }  
+      }
     } 
 
     a {
@@ -44,7 +47,7 @@
     }
 
     &-item-hidden {
-      display: none;
+      visibility: hidden;
     }
   }
 

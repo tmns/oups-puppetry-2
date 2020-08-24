@@ -1,32 +1,28 @@
 <a class="[ skip-link ] [ button ]" href="#main-content">Skip to content</a>
 <header role="banner" class="site-head">
   <div class="wrapper">
-    <div class="site-head__inner">
+    <nav class="[ nav ] [ site-head__nav ]" aria-label="Primary">
       <a href="/" aria-label="{{ site.name }} - home" class="site-head__brand">
         {% include "partials/brand.svg" %}
       </a>
-      <nav class="[ nav ] [ site-head__nav ]" aria-label="Primary">
-        <div class="nav__list">
-          <ul>
-            {% for item in navigation.items %}
-            {% if not item.inMoreMenu %}
-            <li>
-              <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
-            </li>
-            {% endif %}
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="nav__more-option">
-          <a href="#nav__more" role="button" aria-haspopup="true" aria-expanded="false">
-            <span class="visually-hidden">Άλλα</span>
-            <span class="nav__more-option-text" aria-hidden="true">
-              Άλλα
-              <span aria-hidden="true">▾</span>
-            </span>
-          </a>
-        </div>        
-      </nav>
+      <div class="nav__list">
+        <ul>
+          {% for item in navigation.items %}
+          <li class="{{'nav__list-item-hidden' if item.inMoreMenu}}">
+            <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="nav__more-option">
+        <a href="#nav__more" role="button" aria-haspopup="true" aria-expanded="false">
+          <span class="visually-hidden">Άλλα</span>
+          <span class="nav__more-option-text" aria-hidden="true">
+            Άλλα
+            <span aria-hidden="true">▾</span>
+          </span>
+        </a>
+      </div>
       <div id="nav__more" class="nav__more" style="display: none;">
         <ul class="nav__more-list">
           {% for item in navigation.items %}
@@ -35,7 +31,7 @@
           </li>
           {% endfor %}
         </ul>
-      </div>  
-    </div>  
-  </div>
+      </div>         
+    </nav> 
+  </div>  
 </header>

@@ -1,15 +1,8 @@
 .site-head {
   padding: get-size('800') 0;
 
-  &__inner {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   &__brand {
-    flex-shrink: 0;
+    padding-inline-start: get-size('600');
     margin-inline-end: get-size('600');
     transform: rotate(-10deg);
 
