@@ -54,8 +54,8 @@
         moreMenuLink.setAttribute('aria-expanded', !expanded);
 
         // Toggle open state
-        var open = moreMenuTarget.style.display === 'block' || false;
-        moreMenuTarget.style.display = open ? 'none' : 'block'
+        var open = moreMenuTarget.style.display === 'flex' || false;
+        moreMenuTarget.style.display = open ? 'none' : 'flex'
 
         // Move focus to the expanded menu
         if (!open) {
@@ -72,23 +72,30 @@
       });
 
       if ('IntersectionObserver' in window) {
-        var links = document.querySelector('.nav__list');
-        var items = links.querySelectorAll('li');
+        var navListContainer = document.querySelector('.nav__list');
+        var items = navListContainer.querySelectorAll('li');
 
         var observerSettings = {
-          root: links,
+          root: navListContainer,
           threshold: 0.98
         };
+
+        // Find all the list items under the nav__more container
+        // so we can toggle their display appropriately.
+        var moreItems = moreMenuTarget.querySelectorAll('li');
 
         var callback = function(items, observer) {
           Array.prototype.forEach.call(items, function(item) {
             // Change visibility and availability of menu items
             // depending on whether they are intersecting
             console.log('intersecting!!!!')
+            var index = parseInt(item.target.dataset.index);
             if (item.intersectionRatio > 0.98) {
               item.target.classList.remove('nav__list-item-hidden');
+              moreItems[index].classList.add('nav__more-item-hidden');
             } else {
               item.target.classList.add('nav__list-item-hidden');
+              moreItems[index].classList.remove('nav__more-item-hidden');
             }
           });
         };

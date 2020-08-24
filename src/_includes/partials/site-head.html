@@ -8,7 +8,7 @@
       <div class="nav__list">
         <ul>
           {% for item in navigation.items %}
-          <li class="{{'nav__list-item-hidden' if item.inMoreMenu}}">
+          <li data-index={{ loop.index0 }} class="{{'nav__list-item-hidden' if item.inMoreMenu}}">
             <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
           </li>
           {% endfor %}
@@ -22,16 +22,16 @@
             <span aria-hidden="true">▾</span>
           </span>
         </a>
-      </div>
-      <div id="nav__more" class="nav__more" style="display: none;">
-        <ul class="nav__more-list">
-          {% for item in navigation.items %}
-          <li class="{{'nav__more-item-hidden' if not item.inMoreMenu}}">
-            <a href="{{ item.url }}">{{ item.text }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>         
+      </div>        
     </nav> 
+    <div id="nav__more" class="nav__more" style="display: none;">
+      <ul class="nav__more-list">
+        {% for item in navigation.items %}
+        <li class="{{'nav__more-item-hidden' if not item.inMoreMenu}}">
+          <a href="{{ item.url }}">{{ item.text }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div> 
   </div>  
 </header>
