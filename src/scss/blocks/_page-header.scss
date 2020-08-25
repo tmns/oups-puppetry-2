@@ -1,8 +1,8 @@
 .page-header {
-  margin-top: 20vw;
+  padding-top: 20vw;
 
   @include media-query('lg') {
-    margin-top: 8vw;
+    padding-top: 8vw;
   }
 
   .characters {
@@ -15,6 +15,8 @@
   }
 
   .character {
+    fill: get-color('secondary-shade');
+
     &:only-of-type {
       margin: -3vw 0 2vw;
     }

@@ -26,7 +26,7 @@ a:not([class]) {
 }
 
 :focus {
-  outline: 2px dashed get-color('primary');
+  outline: 2px dashed get-color('tertiary-shade');
   outline-offset: 0.25rem;
 }
 

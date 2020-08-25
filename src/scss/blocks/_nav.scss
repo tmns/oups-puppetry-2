@@ -37,7 +37,7 @@
           top: 100%;
           left: 0;
           margin-top: 0.5rem;
-          background: get-color('quinary-glare');
+          background: get-color('dark-glare');
         }
       }
 
@@ -63,8 +63,8 @@
       white-space: nowrap; 
 
       &:hover {
-        background: get-color('dark-shade');
-        color: get-color('light');
+        background: get-color('secondary-shade');
+        color: get-color('primary-glare');
       }
 
       &[aria-expanded="true"] .pyramid {
@@ -82,11 +82,11 @@
     max-width: 170px;
     max-width: min-content;
     font-weight: 900;
-    color: get-color('light');
+    color: get-color('primary-glare');
 
     ul {
       box-shadow: 0 13px 27px -5px rgba(50,50,93,.25),0 8px 16px -8px rgba(0,0,0,.3),0 -6px 16px -6px rgba(0,0,0,.025);
-      background-color: get-color('dark-shade');
+      background-color: get-color('secondary-shade');
       border-radius: get-size('300');
       padding-top: get-size('400');
       padding-inline-end: get-size('400');
@@ -113,7 +113,7 @@
         height: 0;
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
-        border-bottom: 15px solid get-color('dark-shade');
+        border-bottom: 15px solid get-color('secondary-shade');
       }
     }
 
