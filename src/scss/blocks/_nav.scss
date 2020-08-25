@@ -56,15 +56,20 @@
     padding-top: get-size('400');
     padding-inline-start: get-size('400');
     font-weight: 900;
-    
+
     > a {
       display: block;
       text-decoration: none;
-      white-space: nowrap;
+      white-space: nowrap; 
 
       &:hover {
         background: get-color('dark-shade');
         color: get-color('light');
+      }
+
+      &[aria-expanded="true"] .pyramid {
+        display: inline-block;
+        transform: rotate(180deg) translateY(-40%);
       }
     }
   }
