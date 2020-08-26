@@ -11,13 +11,8 @@
       <h1 class="[ headline ] {{'[ font-sans ]' if page.url == '/'}}">{{ pageHeaderTitle }}</h1>
     </div>
     {% if pageHeaderSummary %}
-    <div class="[ page-header__summary ] [ measure-long ]">
+    <div class="[ page-header__summary ] [ measure-compact ]  [ color-light weight-bold ]">
       {{ pageHeaderSummary | safe }}
-    </div>
-    {% endif %}
-    {% if pageHeaderIntro %}
-    <div class="[ page-header__intro ]">
-      {{ pageHeaderIntro | safe }}
     </div>
     {% endif %}
   </div>
