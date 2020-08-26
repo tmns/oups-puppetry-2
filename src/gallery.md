@@ -2,6 +2,8 @@
 title: 'Gallery'
 layout: 'layouts/gallery.html'
 metaDesc: 'Δείτε φωτογραφίες και βίντεο από όλες τις περιπέτειες του ΟΥΠΣ!'
+heading:
+  summary: 'Ρίξτε μια ματιά στις φωτογραφίες και τα βίντεο μας...'
 images:
   - url: '/images/gallery/1.jpg'
     alt: ''
@@ -79,5 +81,3 @@ videos:
   - id: '8I-DmzyaWLY'
   - id: 'oujZWWMvehU'
 ---
-
-Ρίξτε μια ματιά στις φωτογραφίες και τα βίντεο μας... 

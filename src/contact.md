@@ -2,6 +2,8 @@
 title: 'Επικοινωνία'
 layout: 'layouts/contact.html'
 metaDesc: 'Επικοινωνήστε μαζί με το ΟΥΠΣ!'
+heading:
+  summary: 'Επικοινωνήστε μαζί μας...'
 contact: 
   formName: 'contact-page-contact'
   formFields:
@@ -19,5 +21,3 @@ contact:
   image: '/images/contact/contact-us-pirate.jpg'
   imageAlt: 'Pirate puppet using a telephone.'
 ---
-
-Επικοινωνήστε μαζί μας... 

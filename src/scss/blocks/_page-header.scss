@@ -80,7 +80,7 @@
   }
   
   .headline {
-    padding: 5vh 0;
+    padding: 5vw 0;
     font-size: 5vw;
   }
 
@@ -91,8 +91,19 @@
     margin-inline-end: auto;
     margin-inline-start: auto;
     border: 5px solid get-color('light');
-    padding: 7vw 0;
-    text-align: center;
+    padding-top: 7vw;
+    padding-inline-end: 4vw;
+    padding-bottom: 7vw;
+    padding-inline-start: 4vw;
+    text-align: left;
     font-size: 3vw;
+
+    p {
+      margin-top: 4vw;
+      border-top: 1vw dashed get-color('light');
+      padding-top: 4vw;
+      text-align: left;
+      font-size: 2vw;
+    }
   }
 }

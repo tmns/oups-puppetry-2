@@ -13,6 +13,9 @@
     {% if pageHeaderSummary %}
     <div class="[ page-header__summary ] [ measure-compact ]  [ color-light weight-bold ]">
       {{ pageHeaderSummary | safe }}
+      {% if pageHeaderParagraph %}
+      <p>{{ pageHeaderParagraph | safe }}</p>
+      {% endif %}
     </div>
     {% endif %}
   </div>

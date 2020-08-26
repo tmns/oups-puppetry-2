@@ -2,6 +2,8 @@
 title: 'Logo'
 layout: 'layouts/logo.html'
 metaDesc: 'Δείτε όλα τα λογότυπα του ΟΥΠΣ!'
+heading:
+  summary: 'Το λογότυπο μας έχει κέφια και εμείς μαζί του...'
 images:
   - url: '/images/logo/1.jpg'
     alt: ''
@@ -32,5 +34,3 @@ images:
   - url: '/images/logo/14.jpg'
     alt: ''
 ---
-
-Το λογότυπο μας έχει κέφια και εμείς μαζί του 

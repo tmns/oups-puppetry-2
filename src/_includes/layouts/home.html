@@ -2,13 +2,10 @@
 
 {% set pageHeaderTitle = heading.title %}
 {% set pageHeaderSummary = heading.summary %}
+{% set pageHeaderParagraph = heading.paragraph %}
 
 {% block content %}
 {% include "partials/page-header.html" %}
-<article>
-  <h2>{{ intro.title }}</h2>
-  <p>{{ intro.paragraph }}</p>
-</article>
 
 {% set galleryTitle = gallery.title %}
 {% set galleryParagraph = gallery.paragraph %}
