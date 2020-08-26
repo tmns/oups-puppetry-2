@@ -71,7 +71,7 @@
       position: absolute;
       top: 100%;
       right: 50%;
-      transform: translateX(50%);
+      transform: translateX(50%) translateY(1%);
       width: 50%;
       height: 30vw;
       border-left: 1vw solid get-color('dark');
