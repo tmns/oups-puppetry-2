@@ -57,12 +57,12 @@
         var items = navListContainer.querySelectorAll('li');
         items[items.length - 1].classList.add('nav__list-item-hidden');
 
-        var moreMenu = document.querySelector('.nav__more-option');
-        moreMenu.style.display = 'block';
+        var moreMenuOption = document.querySelector('.nav__more-option');
+        moreMenuOption.style.display = 'block';
 
         // Now, we continue on with setting up the functionality of
         // the `more` menuu item (ie, opening / closing it).
-        var moreMenuLink = moreMenu.querySelector('a');
+        var moreMenuLink = moreMenuOption.querySelector('a');
         var moreMenuTarget = document.querySelector('.nav__more');
         var firstMenuItem = moreMenuTarget.querySelector('a[href], button:not([disabled]), input');
         
@@ -86,6 +86,15 @@
         // Ensure link behaves like a <button> by activating click events on SPACE
         moreMenuLink.addEventListener('keydown', function(e) {
           if (e.keyCode === 32) {
+            e.preventDefault();
+            moreMenuLink.click();
+          }
+        });
+
+
+        // Ensure user can close more menu by pressing ESC
+        moreMenuTarget.addEventListener('keydown', function(e) {
+          if (e.keyCode === 27) {
             e.preventDefault();
             moreMenuLink.click();
           }
