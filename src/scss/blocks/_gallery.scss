@@ -1,0 +1,19 @@
+.gallery {
+  position: relative;
+  z-index: -1;
+  margin-top: -23vw;
+  padding-top: 23vw;
+  background: repeating-linear-gradient(22deg, hsl(221.10000000000002, 66%, 20.8%), hsl(221.10000000000002, 66%, 20.8%) 5px, hsl(335.29999999999995, 90.5%, 33.1%) 5px, hsl(335.29999999999995, 90.5%, 33.1%) 20px);
+
+  &__heading {
+    border: 5px solid #9ed293;
+    margin: 0 auto;
+    padding: 4vw;
+    transform: rotate(-2deg);
+    font-size: 2vw;
+
+    > p {
+      margin-top: get-size('400');
+    }
+  }
+}

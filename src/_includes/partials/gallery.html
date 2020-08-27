@@ -1,23 +1,27 @@
 <article class="gallery">
-  {% if galleryTitle %}
-  <h2>{{ galleryTitle }}</h2>
-  {% endif %}
-
-  {% if galleryParagraph %}
-  <p>{{ galleryParagraph }}</p>
-  {% endif %}
-
-  <ul class="auto-grid">
-    {% for image in galleryImages %}
-    <li>
-      <img
-        class="[ gallery__image ]" 
-        src="{{ image.url }}" 
-        alt="{{ image.alt }}" 
-        draggable="false"
-        loading="lazy" 
-      />
-    </li>
-    {% endfor %}  
-  </ul>
+  <div class="wrapper">
+    <div class="gallery__heading bg-light-shade measure-long color-secondary-shade">
+      {% if galleryTitle %}
+      <h2>{{ galleryTitle }}</h2>
+      {% endif %}
+    
+      {% if galleryParagraph %}
+      <p>{{ galleryParagraph }}</p>
+      {% endif %}
+    </div>
+  
+    <ul class="auto-grid">
+      {% for image in galleryImages %}
+      <li>
+        <img
+          class="[ gallery__image ]" 
+          src="{{ image.url }}" 
+          alt="{{ image.alt }}" 
+          draggable="false"
+          loading="lazy" 
+        />
+      </li>
+      {% endfor %}  
+    </ul>
+  </div>
 </article>
