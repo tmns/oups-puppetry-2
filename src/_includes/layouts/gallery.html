@@ -4,22 +4,20 @@
 {% set pageHeaderSummary = heading.summary %}
 
 {% block content %}
-  <div class="wrapper">
-    <article class="gallery">
-      {% include "partials/page-header.html" %}
-      <div class="gallery-photos">
-        <h2>Φωτογραφίες</h2>
-        {% set galleryImages = images %}
-        {% include "partials/gallery.html" %}
-      </div>
-      <div class="gallery-videos">
-        <h2>Βίντεο</h2>
-        <ul class="gallery-videos__list">
-          {% for video in videos %}
-          <li><lite-youtube videoid="{{ video.id }}"></lite-youtube></li>
-          {% endfor %}
-        </ul>
-      </div>
-    </article>
-  </div>
+  <article class="gallery">
+    {% include "partials/page-header.html" %}
+    <div class="gallery-photos">
+      <h2>Φωτογραφίες</h2>
+      {% set galleryImages = images %}
+      {% include "partials/gallery.html" %}
+    </div>
+    <div class="gallery-videos">
+      <h2>Βίντεο</h2>
+      <ul class="gallery-videos__list">
+        {% for video in videos %}
+        <li><lite-youtube videoid="{{ video.id }}"></lite-youtube></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </article>
 {% endblock %}
