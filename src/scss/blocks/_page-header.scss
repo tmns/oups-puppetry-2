@@ -17,14 +17,25 @@
   .character {
     $character-colors: (1: 'dark', 2: 'tertiary-shade', 3: 'dark-shade', 4: 'tertiary', 5: 'secondary-glare', 6: 'quinary-shade', 7: 'secondary', 8: 'dark-glare');
 
+    animation-direction: reverse;
+    animation-duration: 1828ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 
     @each $index, $color in $character-colors {
       &-#{$index} {
         grid-column: $index;
         fill: get-color($color);
+        animation-name: animation-#{$index};
 
         @if $index > 3 {
           margin-top: -1vw;
+        }
+
+        @keyframes animation-#{$index} {
+          0% { fill: get-color($color) }
+          40% { fill: get-color(map-get($character-colors, 9 - $index)) }
+          100% { fill: get-color($color) }
         }
       }
     }
@@ -67,14 +78,22 @@
     margin-inline-end: auto;
     margin-inline-start: auto;
     border: 5px solid get-color('light');
-    padding-top: 7vw;
-    padding-inline-end: 4vw;
-    padding-bottom: 7vw;
-    padding-inline-start: 4vw;
-    font-size: get-size('500');
+    max-width: 85%;
+    padding: 7vw 4vw;
 
-    @include media-query('md') {
-      font-size: 3vw;
+    h2,
+    p {
+      background-image: repeating-linear-gradient(253deg, hsl(192.79999999999995, 94.9%, 84.5%), hsl(192.79999999999995, 94.9%, 84.5%) 10px, hsl(180, 100%, 99.6%) 10px, hsl(180, 100%, 99.6%) 30px);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+      font-size: get-size('500');
+      
+      @include media-query('md') {
+        font-size: 3vw;
+      }
     }
 
     p {
