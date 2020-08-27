@@ -15,42 +15,18 @@
   }
 
   .character {
-    fill: get-color('secondary-shade');
+    $character-colors: (1: 'dark', 2: 'tertiary-shade', 3: 'dark-shade', 4: 'tertiary', 5: 'secondary-glare', 6: 'quinary-shade', 7: 'secondary', 8: 'dark-glare');
 
-    &:nth-child(n + 4) {
-      margin-top: -1vw;
-    }
 
-    &-1 {
-      grid-column: 1;
-    }
+    @each $index, $color in $character-colors {
+      &-#{$index} {
+        grid-column: $index;
+        fill: get-color($color);
 
-    &-2 {
-      grid-column: 2;
-    }
-
-    &-3 {
-      grid-column: 3;
-    }
-
-    &-4 {
-      grid-column: 4;
-    }
-
-    &-5 {
-      grid-column: 5;
-    }
-
-    &-6 {
-      grid-column: 6;
-    }
-
-    &-7 {
-      grid-column: 7;
-    }
-
-    &-8 {
-      grid-column: 8;
+        @if $index > 3 {
+          margin-top: -1vw;
+        }
+      }
     }
 
     svg {
