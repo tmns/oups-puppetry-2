@@ -1,5 +1,6 @@
 .page-header {
   padding-top: 20vw;
+  padding-bottom: 30vw;
 
   @include media-query('lg') {
     padding-top: 4vw;
@@ -17,15 +18,13 @@
   .character {
     $character-colors: (1: 'dark', 2: 'tertiary-shade', 3: 'dark-shade', 4: 'tertiary', 5: 'secondary-glare', 6: 'quinary-shade', 7: 'secondary', 8: 'dark-glare');
 
-    animation-direction: reverse;
-    animation-duration: 1828ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-
+    --duration: 1500ms;
+    
     @each $index, $color in $character-colors {
       &-#{$index} {
         grid-column: $index;
         fill: get-color($color);
+        animation: calc(var(--duration) * 2) calc(#{$index} * (var(--duration) / -3)) steps(3, end) alternate infinite;
         animation-name: animation-#{$index};
 
         @if $index > 3 {
@@ -33,9 +32,9 @@
         }
 
         @keyframes animation-#{$index} {
-          0% { fill: get-color($color) }
-          40% { fill: get-color(map-get($character-colors, 9 - $index)) }
-          100% { fill: get-color($color) }
+          0% { fill: get-color(map-get($character-colors, random(8))) }
+          50% { fill: get-color(map-get($character-colors, random(8))) }
+          100% { fill: get-color(map-get($character-colors, random(8))) }
         }
       }
     }
@@ -73,7 +72,7 @@
 
   &__summary {
     transform: rotate(-2deg);
-    background: repeating-linear-gradient(149deg, hsl(221.10000000000002, 66%, 20.8%), hsl(221.10000000000002, 66%, 20.8%) 1px, hsl(335.29999999999995, 90.5%, 33.1%) 1px, hsl(335.29999999999995, 90.5%, 33.1%) 2px);
+    background: repeating-linear-gradient(149deg, hsl(221, 66%, 20.8%), hsl(221, 66%, 20.8%) 1px, hsl(335, 90.5%, 33.1%) 1px, hsl(335, 90.5%, 33.1%) 2px);
     margin-top: 19vw;
     margin-inline-end: auto;
     margin-inline-start: auto;
@@ -83,7 +82,7 @@
 
     h2,
     p {
-      background-image: repeating-linear-gradient(253deg, hsl(192.79999999999995, 94.9%, 84.5%), hsl(192.79999999999995, 94.9%, 84.5%) 10px, hsl(180, 100%, 99.6%) 10px, hsl(180, 100%, 99.6%) 30px);
+      background-image: repeating-linear-gradient(253deg, hsl(192, 94.9%, 84.5%), hsl(192, 94.9%, 84.5%) 10px, hsl(180, 100%, 99.6%) 10px, hsl(180, 100%, 99.6%) 30px);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
