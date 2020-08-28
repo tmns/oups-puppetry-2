@@ -11,11 +11,11 @@
       {% endif %}
     </div>
   
-    <ul class="auto-grid">
+    <ul>
       {% for image in galleryImages %}
       <li>
         <img
-          class="[ gallery__image ]" 
+          class="[ gallery__image-{{loop.index}} ]" 
           src="{{ image.url }}" 
           alt="{{ image.alt }}" 
           draggable="false"
