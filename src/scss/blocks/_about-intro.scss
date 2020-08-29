@@ -1,0 +1,47 @@
+@use 'mixins/image-clip-path';
+
+.about__intro {
+  --separator-color: #{get-color('dark-glare')};
+
+  &--inner {
+    padding-top: 10vw;
+    padding-bottom: 30vw;
+
+    div + div {
+      margin-top: 1.33vw;
+    }
+  }
+
+  &--item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+    }
+
+    figure {
+      border: 2px dashed #{get-color('light-shade')};
+
+      img {
+        width: 100%;
+        @include image-clip-path.apply-class(2, 'about__intro--image')
+      }
+
+      
+    }
+
+    figure + p {
+      margin: 1.77vw 0;
+      flex-basis: 45ch;
+    }
+
+    &:last-child {
+      p {
+        max-width: 65ch;
+      }
+    }
+  }
+}

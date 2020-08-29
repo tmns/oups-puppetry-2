@@ -1,27 +1,37 @@
 {% extends "layouts/base.html" %}
+{% set pageCriticalStyles = ['css/about.css'] %}
 
 {% set pageHeaderTitle = title %}
 {% set pageHeaderSummary = heading.summary %}
 {% set peopleItems = collections.people %}
 
 {% block content %}
-  <article>
-    {% include "partials/page-header.html" %}
-    <div>
-      <div class="[ wrapper ]">
-        <div class="intro">
-          {% for item in intro %}
-          <div class="intro-item">
-            {% if item.image %}
-            <img src="{{ item.image }}" alt="{{ item.imageAlt }}" draggable="false" loading="lazy" />
-            {% endif %}
-            <p>{{ item.paragraph }}</p>
-          </div>
-          {% endfor %}
+  {% include "partials/page-header.html" %}
+  <article class="[ about ] [ responsive-text ]">
+    <div class="[ about__intro ] [ bg-dark-glare ] [ color-light-shade ]">
+      <svg class="wavey-separator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill-opacity="1" d="M0,288L21.8,256C43.6,224,87,160,131,149.3C174.5,139,218,181,262,208C305.5,235,349,245,393,256C436.4,267,480,277,524,266.7C567.3,256,611,224,655,218.7C698.2,213,742,235,785,229.3C829.1,224,873,192,916,160C960,128,1004,96,1047,85.3C1090.9,75,1135,85,1178,112C1221.8,139,1265,181,1309,208C1352.7,235,1396,245,1418,250.7L1440,256L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"></path></svg>
+      <div class="[ about__intro--inner ] [ wrapper ]">
+        {% for item in intro %}
+        <div class="about__intro--item">
+          {% if item.image %}
+          <figure>
+                      <img
+              class="about__intro--image-{{loop.index}}"
+              src="{{ item.image }}" 
+              alt="{{ item.imageAlt }}" 
+              draggable="false" 
+              loading="lazy" 
+            />
+          </figure>
+          {% endif %}
+          <p>{{ item.paragraph }}</p>
         </div>
-        <h2>Ποιοι είναι οι μεγάλοι παίχτες;;</h2>
-        {% include "partials/people.html" %}
+        {% endfor %}
       </div>
+    </div>
+    <div class="about__people">
+      <h2>Ποιοι είναι οι μεγάλοι παίχτες;;</h2>
+      {% include "partials/people.html" %}
     </div>
   </article>
 {% endblock %}
