@@ -1,12 +1,7 @@
 .gallery {
   position: relative;
-  padding-bottom: 10vw;
-
-  > svg {
-    position: absolute;
-    top: 1px; // Fix weird off-by-1 issue in Chrome.
-    transform: translateY(-100%);
-  }
+  padding-bottom: 30vw;
+  --separator-color: #{get-color('secondary')};
 
   &__inner {
     padding-top: 10vw;

@@ -1,0 +1,6 @@
+.wavey-separator {
+  position: absolute;
+  top: 1px; // Fix weird off-by-1 issue in Chrome.
+  transform: translateY(-100%);
+  fill: var(--separator-color);
+}
