@@ -4,7 +4,7 @@
 
   > svg {
     position: absolute;
-    top: 0;
+    top: 1px; // Fix weird off-by-1 issue in Chrome.
     transform: translateY(-100%);
   }
 
@@ -13,8 +13,7 @@
   }
 
   &__heading {
-    border: 2px solid get-color(quaternary-shade);
-    box-shadow: 5px 6px 0px get-color(quaternary-shade);
+    --border-color: #{get-color('quaternary-shade')};
     margin: 0 auto 10vw auto;
     padding: 4vw;
     transform: rotate(-2deg);

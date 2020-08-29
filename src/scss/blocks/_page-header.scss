@@ -27,7 +27,9 @@
         animation: calc(var(--duration) * 2) calc(#{$index} * (var(--duration) / -3)) steps(3, end) alternate infinite;
         animation-name: animation-#{$index};
 
-        @if $index > 3 {
+        // In Chrome margin-top on the 6th char (Oups! sign) brings it out of the box
+        // So we can't apply the margin there :(
+        @if $index > 3 and $index != 6 {
           margin-top: -1vw;
         }
 
@@ -46,9 +48,9 @@
   }
 
   &__heading {
-    margin: -3.5rem 0 5rem;
-    border: 5px solid get-color('dark');
     transform: rotate(-2deg);
+    margin: -3.5rem 0 5rem;
+    --border-color: #{get-color('dark')};
     text-align: center;
 
     &:after {
@@ -75,7 +77,7 @@
     margin-top: 19vw;
     margin-inline-end: auto;
     margin-inline-start: auto;
-    border: 5px solid get-color('light');
+    --border-color: #{get-color('light')};
     max-width: 85%;
     padding: 7vw 4vw;
 
