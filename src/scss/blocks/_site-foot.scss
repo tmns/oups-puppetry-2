@@ -1,8 +1,31 @@
 .site-foot {
+  position: relative;
   padding: get-size('500') 0 get-size('700') 0;
   text-align: center;
+  --separator-color: #{get-color('tertiary-glare')};
 
-  > a + a {
-    margin-inline-start: get-size('500');
+  p {
+    margin-bottom: 1.33vw;
+  }
+
+  a {
+    text-decoration-color: get-color('light-glare');
+
+    &:hover {
+      color: get-color('light-shade');
+      text-decoration-color: get-color('light-shade');
+    }
+
+    &:focus {
+      outline: 1px dashed get-color('light-shade');
+    }
+
+    svg {
+      fill: get-color('light-glare');
+    }
+
+    + a {
+      margin-inline-start: get-size('500');
+    }
   }
 }
