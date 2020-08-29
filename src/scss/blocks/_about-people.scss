@@ -1,0 +1,9 @@
+.about__people {
+  position: relative;
+  padding-bottom: 30vw;
+  --separator-color: #{get-color('quinary')};
+
+  &--inner {
+    padding-top: 10vw;
+  }
+}
