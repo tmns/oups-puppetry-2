@@ -28,7 +28,7 @@
 
       img {
         width: 100%;
-        @include image-clip-path.apply-class(2, 'about__intro--image')
+        @include image-clip-path.apply-class('about__intro--image', 2)
       }      
     }
 

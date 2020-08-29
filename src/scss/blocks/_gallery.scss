@@ -30,7 +30,7 @@
       height: 400px;
       object-fit: cover;
 
-      @include image-clip-path.apply-class(16, 'gallery__image');
+      @include image-clip-path.apply-class('gallery__image', 16);
     }
   }
 }
