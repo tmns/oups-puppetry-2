@@ -1,13 +1,13 @@
 <article class="[ gallery ] [ bg-secondary ]">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#343756" fill-opacity="1" d="M0,96L48,90.7C96,85,192,75,288,106.7C384,139,480,213,576,245.3C672,277,768,267,864,240C960,213,1056,171,1152,144C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
   <div class="[ gallery__inner ] [ wrapper ]">
-    <div class="gallery__heading bg-light-shade measure-long color-secondary-shade">
+    <div class="[ gallery__heading ] [ bg-light-shade color-secondary-shade ] [ responsive-text ]">
       {% if galleryTitle %}
       <h2>{{ galleryTitle }}</h2>
       {% endif %}
     
       {% if galleryParagraph %}
-      <p>{{ galleryParagraph }}</p>
+      <p>{{ galleryParagraph | safe }}</p>
       {% endif %}
     </div>
   

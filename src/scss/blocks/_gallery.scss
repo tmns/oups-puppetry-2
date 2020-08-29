@@ -18,11 +18,7 @@
     margin: 0 auto 10vw auto;
     padding: 4vw;
     transform: rotate(-2deg);
-    font-size: get-size('400');
-
-    @include media-query('md') {
-      font-size: 2vw;
-    }
+    max-width: 80%;
 
     > p {
       margin-top: get-size('400');

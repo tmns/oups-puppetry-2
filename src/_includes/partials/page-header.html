@@ -7,11 +7,11 @@
       {% endif %}
       {% endfor %}
     </div>
-    <div class="[ page-header__heading ] [ bg-secondary color-primary-glare ]">
+    <div class="[ page-header__heading ] [ bg-secondary color-primary-glare ] [ responsive-text ]">
       <h1 class="[ headline ] {{'[ font-sans ]' if page.url == '/'}}">{{ pageHeaderTitle }}</h1>
     </div>
     {% if pageHeaderSummary %}
-    <div class="[ page-header__summary ] [ color-light weight-bold ]">
+    <div class="[ page-header__summary ] [ color-light weight-bold ] [ responsive-text ]">
       <h2>{{ pageHeaderSummary | safe }}</h2>
       {% if pageHeaderParagraph %}
       <p>{{ pageHeaderParagraph | safe }}</p>
