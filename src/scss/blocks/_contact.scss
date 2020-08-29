@@ -1,0 +1,77 @@
+.contact {
+  position: relative;
+  padding-bottom: 30vw;
+  --separator-color: #{get-color('light-shade')};
+  --border-color: #{get-color('tertiary')};
+
+  &__inner {
+    padding-top: 10vw;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin: 0 auto;
+    max-width: 80%;
+
+    form {
+      flex-grow: 1;
+    }
+
+    label + input,
+    label + textarea {
+      margin-top: .77vw;
+    }
+
+    div[id*=error] + label {
+      margin-top: 1.33vw;
+    }
+
+    label {
+      display: block;
+    }
+
+    input,
+    textarea {
+      display: inline-block;
+      background: transparent;
+      border: 2px dashed get-color('tertiary');
+      padding: 1vw;
+      width: 100%;
+      color: inherit;
+
+      &:focus {
+        outline: 2px solid get-color('dark-shade');
+      }
+    }
+
+    button {
+      margin-top: 1.33vw;
+      --color: #{get-color('tertiary')};
+    }
+
+    img {
+      display: none;
+
+      @include media-query('lg') {
+        display: block;
+        flex-shrink: 0;
+        margin-left: 5vw;
+        width: 250px;
+        height: 291px;
+
+        --duration: 1000ms;
+        --i: 5;
+        animation: dance calc(var(--duration) * 2) calc(var(--i) * (var(--duration) / -3)) steps(3, end) infinite;
+
+        @keyframes dance {
+          25%  { transform: translate(-5%,  5%) scale(1.05) rotate(-5deg) }
+          50%  { transform: translate( 5%, -2%) rotate( 2deg) }
+          75%  { transform: translate(10%,  0%) scale(1.02) rotate( 8deg) }
+          100% { transform: translate( 0%, -5%) rotate( 4deg) }
+        }
+      }
+    }
+  }
+}
