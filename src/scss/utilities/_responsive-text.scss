@@ -20,7 +20,10 @@
     }  
   }
 
-  p {
+  p,
+  label,
+  input,
+  textarea {
     font-size: get-size('400');
 
     @include media-query('lg') {
