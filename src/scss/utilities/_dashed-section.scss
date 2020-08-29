@@ -1,0 +1,9 @@
+.dashed-section {
+  padding: 7vw 0 !important;
+  border-top: 1rem dashed var(--border-color);
+  border-bottom: 1rem dashed var(--border-color);
+
+  + .dashed-section {
+    border-top: none;
+  }
+}

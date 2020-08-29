@@ -23,7 +23,8 @@
   p,
   label,
   input,
-  textarea {
+  textarea,
+  figcaption {
     font-size: get-size('400');
 
     @include media-query('lg') {

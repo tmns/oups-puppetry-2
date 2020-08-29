@@ -23,9 +23,15 @@
         {% endif %}
         <div id="{{ field.name }}-error"></div>
         {% endfor %}
-      <button class="button border" type="submit">{{ contact.buttonIcon }}{{ contact.buttonText }}</button>
-    </form>
-    <img src="{{ contact.image }}" alt="{{ contact.imageAlt }}" draggable="false" loading="lazy" />  
+        <button class="button border" type="submit">{{ contact.buttonIcon }}{{ contact.buttonText }}</button>
+      </form>
+      <img 
+        class="dance" 
+        src="{{ contact.image }}" 
+        alt="{{ contact.imageAlt }}" 
+        draggable="false" 
+        loading="lazy" 
+      />  
     </div>
   </div>
 </article> 

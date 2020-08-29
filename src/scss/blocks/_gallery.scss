@@ -16,9 +16,6 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-items: center;
     list-style: none;
-    padding: 7vw 0;
-    border-top: 1rem dashed get-color('quaternary-shade');
-    border-bottom: 1rem dashed get-color('quaternary-shade');
 
     li {
       border: 2px dashed get-color('quaternary-shade');
