@@ -1,0 +1,10 @@
+.section-heading {
+  margin: 0 auto 10vw auto;
+  padding: 4vw;
+  transform: rotate(-2deg);
+  max-width: 80%;
+
+  > p {
+    margin-top: get-size('400');
+  }
+}
