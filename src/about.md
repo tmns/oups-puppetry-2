@@ -1,5 +1,5 @@
 ---
-title: 'Για έμας'
+title: 'Για εμάς'
 layout: 'layouts/about.html'
 metaDesc: 'Τα πάντα όλα για ΟΥΠΣ! το κουκλοθεάτρο!'
 heading:
