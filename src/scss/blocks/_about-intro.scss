@@ -1,11 +1,12 @@
 @use 'mixins/image-clip-path';
 
 .about__intro {
+  position: relative;
+  padding-bottom: 30vw;
   --separator-color: #{get-color('dark-glare')};
 
   &--inner {
     padding-top: 10vw;
-    padding-bottom: 30vw;
 
     div + div {
       margin-top: 1.33vw;
@@ -28,9 +29,7 @@
       img {
         width: 100%;
         @include image-clip-path.apply-class(2, 'about__intro--image')
-      }
-
-      
+      }      
     }
 
     figure + p {

@@ -4,13 +4,10 @@
   position: relative;
   padding-bottom: 30vw;
   --separator-color: #{get-color('secondary')};
+  --border-color: #{get-color('quaternary-shade')};
 
   &__inner {
     padding-top: 10vw;
-  }
-
-  &__heading {
-    --border-color: #{get-color('quaternary-shade')};
   }
 
   ul {
