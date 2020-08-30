@@ -1,0 +1,36 @@
+// First up: config and functions
+@import 'config';
+
+// Set Gorko to output no CSS for this file
+$outputTokenCSS: false;
+
+// Next: pull in gorko for design tokens
+@import '../../node_modules/gorko/gorko.scss';
+
+.sponsors {
+  position: relative;
+  padding-bottom: 30vw;
+  --separator-color: #{get-color('dark-shade')};
+  --border-color: #{get-color('primary-glare')};
+
+  li + li {
+    margin-top: 1.77vw;
+  }
+
+  img {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 2px dashed var
+
+    @include media-query('md') {
+      width: 50%;
+    }
+  }
+}
+
+// Pull in blocks
+@import 'blocks/gallery';
+
+// Pull in utilities
+@import 'utilities/dashed-section';
