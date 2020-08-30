@@ -7,6 +7,12 @@ $outputTokenCSS: false;
 // Next: pull in gorko for design tokens
 @import '../../node_modules/gorko/gorko.scss';
 
+.gallery {
+  --separator-color: #{get-color('secondary')};
+  --background-color: #{get-color('secondary')};
+  --border-color: #{get-color('quaternary-shade')};
+}
+
 // Pull in blocks
 @import 'blocks/gallery';
 @import 'blocks/contact';

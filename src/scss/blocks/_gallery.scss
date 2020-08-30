@@ -3,8 +3,7 @@
 .gallery {
   position: relative;
   padding-bottom: 30vw;
-  --separator-color: #{get-color('secondary')};
-  --border-color: #{get-color('quaternary-shade')};
+  background-color: var(--background-color);
 
   &__inner {
     padding-top: 10vw;
@@ -17,8 +16,9 @@
     justify-items: center;
     list-style: none;
 
+
     li {
-      border: 2px dashed get-color('quaternary-shade');
+      border: 2px dashed var(--border-color);
     }
 
     img {      
