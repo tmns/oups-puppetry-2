@@ -10,10 +10,12 @@
 
   a {
     text-decoration-color: get-color('light-glare');
+    text-decoration-style: dashed;
 
     &:hover {
       color: get-color('light-shade');
       text-decoration-color: get-color('light-shade');
+      text-decoration-style: solid;
     }
 
     &:focus {
