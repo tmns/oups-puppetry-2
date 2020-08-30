@@ -20,7 +20,7 @@
     }
 
     a {
-      text-decoration-color: get-color('light-glare');
+      text-decoration-color: var(--color);
       text-decoration-style: dashed;
 
       &:hover,

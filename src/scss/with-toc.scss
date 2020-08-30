@@ -10,6 +10,8 @@ $outputTokenCSS: false;
 .with-toc {
   position: relative;
   --separator-color: #{get-color('quinary-glare')};
+  --background-color: #{get-color('quinary-glare')};
+  --color: #{get-color('light-glare')};
   --border-color: #{get-color('light-glare')};
   --space: 1rem;
 
@@ -28,17 +30,30 @@ $outputTokenCSS: false;
 .toc-container {
   flex-basis: 35rem;
   flex-grow: 1;
-  border-right: 1rem dashed var(--border-color);
+  border: .5rem dashed var(--border-color);
+  margin-bottom: 4.2rem;
+  margin-right: 2.36rem;
+  margin-left: 2.36rem;
+  padding: 2.36rem;
+  
+  @media (min-width: 1150px) {
+    border: none;
+    border-right: 1rem dashed var(--border-color);
+    margin: calc(var(--space) / 2);
+    padding: 0;
+  }
 }
 
 .artifacts-container {
   flex-basis: 0;
   flex-grow: 999;
+  margin: calc(var(--space) / 2);
   min-width: calc(50% - var(--space));
 }
 
 // Pull in blocks
 @import 'blocks/toc';
+@import 'blocks/artifact';
 @import 'blocks/gallery';
 
 // Pull in utilities

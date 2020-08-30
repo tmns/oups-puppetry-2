@@ -1,0 +1,56 @@
+.artifact {
+  .section-heading {
+    margin-bottom: 7vw;
+  }
+
+  .link-svg {
+    margin-inline-start: 1vw;
+
+    svg {
+      vertical-align: middle;
+      fill: var(--color);
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.77vw;
+    padding: 0 4.2vw;
+
+    * + * {
+      margin-top: 1.77vw;
+    }
+
+    span {
+      transform: rotate(-2deg);
+      background: var(--color);
+      padding: .33vw;
+      color: var(--background-color);
+      font-weight: 900;
+    }
+
+    a {
+      align-self: end;
+      margin-bottom: 5.6vw;
+    }
+
+    .photos-label {
+      text-align: center;
+    }
+  }
+
+  .gallery__inner {
+    padding-top: 0;
+
+    ul {
+      border-top: 0;
+    }
+  }
+
+  &:not(:last-of-type) {
+    .gallery {
+      padding-bottom: 10vw;
+    }
+  }
+}
