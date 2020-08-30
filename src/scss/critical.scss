@@ -12,8 +12,8 @@
 }
 
 body {
-  background: get-color('light');
-  color: get-color('dark-shade');
+  background: get-color('primary-glare');
+  color: get-color('seondary-shade');
   line-height: 1.5;
   font-size: get-size('500');
 
@@ -46,26 +46,30 @@ h4 {
 // High contrast selection because it can help visually-impaired
 // folks read the text easier
 ::selection {
-  color: get-color('light');
+  color: get-color('light-glare');
 
   // We set this as an RGBA because that’s how you get a solid color, by using 0.99
   // alpha value. Browsers are wild.
-  background: rgba(get-color('dark-shade'), 0.99);
+  background: rgba(get-color('secondary-shade'), 0.99);
 }
 
 // Scrollbar styles
+* {
+  scrollbar-color: get-color('secondary-shade') get-color('quinary-glare');
+}
+
 ::-webkit-scrollbar {
   height: 1rem;
 }
 
 ::-webkit-scrollbar-track {
   background-color: transparent;
-  border: 1px solid get-color('dark-glare');
+  border: 1px solid get-color('quinary-glare');
   border-radius: 0.25rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: get-color('dark');
+  background-color: get-color('secondary-shade');
   border-radius: 0.25rem;
 }
 
