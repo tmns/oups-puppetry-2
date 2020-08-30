@@ -8,15 +8,14 @@ $outputTokenCSS: false;
 @import '../../node_modules/gorko/gorko.scss';
 
 .gallery {
-  --separator-color: #{get-color('tertiary-glare')};
-  --background-color: #{get-color('tertiary-glare')};
-  --border-color: #{get-color('secondary-shade')};
-  --text-color: #{get-color('secondary-shade')};
+  --separator-color: #{get-color('tertiary-shade')};
+  --background-color: #{get-color('tertiary-shade')};
+  --border-color: #{get-color('primary')};
+  --text-color: #{get-color('primary')};
 }
 
 // Pull in blocks
 @import 'blocks/gallery';
-@import 'blocks/videos';
 
 // Pull in utilities
 @import 'utilities/dashed-section';

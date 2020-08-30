@@ -5,8 +5,8 @@
 {% set pageHeaderParagraph = heading.paragraph %}
 
 {% block content %}
+  {% include "partials/page-header.html" %}
   <article class="sponsors">
-    {% include "partials/page-header.html" %}
     {% set galleryImages = images %}
     {% include "partials/gallery.html" %}
   </article>

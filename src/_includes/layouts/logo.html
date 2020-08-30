@@ -1,11 +1,13 @@
 {% extends "layouts/base.html" %}
+{% set pageCriticalStyles = ['css/logo.css'] %}
 
 {% set pageHeaderTitle = title %}
 {% set pageHeaderSummary = heading.summary %}
 
 {% block content %}
+  {% include "partials/page-header.html" %}
   <article class="logo">
-    {% include "partials/page-header.html" %}
+    {% set withSeparator = 'true' %}
     {% set galleryImages = images %}
     {% include "partials/gallery.html" %}
   </article>

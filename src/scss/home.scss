@@ -1,5 +1,3 @@
-@use 'mixins/image-clip-path';
-
 // First up: config and functions
 @import 'config';
 
@@ -14,10 +12,6 @@ $outputTokenCSS: false;
   --background-color: #{get-color('secondary')};
   --border-color: #{get-color('quaternary-shade')};
   --text-color: #{get-color('quaternary-shade')};
-
-  img {
-    @include image-clip-path.apply-class('gallery__image', 16);
-  }
 }
 
 // Pull in blocks
