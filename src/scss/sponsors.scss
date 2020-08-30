@@ -21,7 +21,7 @@ $outputTokenCSS: false;
     width: 80%;
     margin: 0 auto;
     padding: 1rem;
-    border: 2px dashed var
+    border: 2px dashed var(--border-color);
 
     @include media-query('md') {
       width: 50%;
