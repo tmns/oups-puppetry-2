@@ -1,5 +1,3 @@
-@use 'mixins/image-clip-path';
-
 .gallery {
   position: relative;
   padding-bottom: 30vw;
@@ -25,8 +23,6 @@
       width: 400px;
       height: 400px;
       object-fit: cover;
-
-      @include image-clip-path.apply-class('gallery__image', 16);
     }
   }
 }
