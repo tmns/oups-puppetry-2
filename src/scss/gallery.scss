@@ -10,20 +10,19 @@ $outputTokenCSS: false;
 @import '../../node_modules/gorko/gorko.scss';
 
 .gallery {
-  --separator-color: #{get-color('secondary')};
-  --background-color: #{get-color('secondary')};
-  --border-color: #{get-color('quaternary-shade')};
-  --text-color: #{get-color('quaternary-shade')};
-
+  --separator-color: #{get-color('tertiary-glare')};
+  --background-color: #{get-color('tertiary-glare')};
+  --border-color: #{get-color('secondary-shade')};
+  --text-color: #{get-color('secondary-shade')};
+  
   img {
-    @include image-clip-path.apply-class('gallery__image', 16);
+    @include image-clip-path.apply-class('gallery__image', 31);
   }
 }
 
 // Pull in blocks
 @import 'blocks/gallery';
-@import 'blocks/contact';
+@import 'blocks/videos';
 
 // Pull in utilities
 @import 'utilities/dashed-section';
-@import 'utilities/dance';

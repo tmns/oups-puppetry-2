@@ -1,0 +1,16 @@
+.videos {
+  position: relative;
+  padding-bottom: 30vw;
+  --separator-color: #{get-color('secondary-glare')};
+  --border-color: #{get-color('light')};
+
+  &__inner {
+
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 3rem;
+  }
+}
