@@ -1,0 +1,37 @@
+.toc {
+  padding: 0 1vw;
+
+  div {
+    display: inline-block;
+    transform: rotate(-2deg);
+    margin-bottom: 1vw;
+
+    h2 {
+      padding: 1vw;
+    }  
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+
+    li + li {
+      margin-top: 1.33vw;
+    }
+
+    a {
+      text-decoration-color: get-color('light-glare');
+      text-decoration-style: dashed;
+
+      &:hover,
+      &:visited {
+        color: get-color('light-shade');
+        text-decoration-color: get-color('light-shade');
+
+      &:hover {
+        text-decoration-style: solid;
+      }
+      }
+    }
+  }
+}

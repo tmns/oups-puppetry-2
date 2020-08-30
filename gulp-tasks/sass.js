@@ -13,6 +13,7 @@ const criticalStyles = [
   'critical.scss',
   'home.scss',
   'about.scss',
+  'with-toc.scss'
 ]
 
 // Takes the arguments passed by `dest` and determines where the output file goes

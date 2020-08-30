@@ -1,0 +1,45 @@
+// First up: config and functions
+@import 'config';
+
+// Set Gorko to output no CSS for this file
+$outputTokenCSS: false;
+
+// Next: pull in gorko for design tokens
+@import '../../node_modules/gorko/gorko.scss';
+
+.with-toc {
+  position: relative;
+  --separator-color: #{get-color('quinary-glare')};
+  --border-color: #{get-color('light-glare')};
+  --space: 1rem;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(var(--space) / 2 * -1);
+    padding-top: 10vw;
+
+    > * {
+      margin: calc(var(--space) / 2);
+    }
+  }
+}
+
+.toc-container {
+  flex-basis: 35rem;
+  flex-grow: 1;
+  border-right: 1rem dashed var(--border-color);
+}
+
+.artifacts-container {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(50% - var(--space));
+}
+
+// Pull in blocks
+@import 'blocks/toc';
+@import 'blocks/gallery';
+
+// Pull in utilities
+@import 'utilities/dashed-section';
