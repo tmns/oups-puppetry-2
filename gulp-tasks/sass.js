@@ -15,7 +15,8 @@ const criticalStyles = [
   'about.scss',
   'with-toc.scss',
   'gallery.scss',
-  'logo.scss'
+  'logo.scss',
+  'contact.scss'
 ]
 
 // Takes the arguments passed by `dest` and determines where the output file goes

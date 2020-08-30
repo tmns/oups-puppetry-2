@@ -1,0 +1,34 @@
+// First up: config and functions
+@import 'config';
+
+// Set Gorko to output no CSS for this file
+$outputTokenCSS: false;
+
+// Next: pull in gorko for design tokens
+@import '../../node_modules/gorko/gorko.scss';
+
+.contact {
+  &__intro {
+    max-width: 80%;
+    margin: 0 auto 2.36vw;
+
+    > a {
+      display: block;
+    }
+
+    * + * {
+      margin-top: 1.33vw;
+    }
+  }
+
+  img {
+    width: 300px !important;
+    height: 100% !important;
+  }
+}
+
+// Pull in blocks
+@import 'blocks/contact';
+
+// Pull in utilities
+@import 'utilities/dance';

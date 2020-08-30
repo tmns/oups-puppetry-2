@@ -1,16 +1,12 @@
 {% extends "layouts/base.html" %}
+{% set pageCriticalStyles = ['css/contact.css'] %}
 
 {% set pageHeaderTitle = title %}
 {% set pageHeaderSummary = heading.summary %}
 
 {% block content %}
-  <section class="contact-intro">
-    {% include "partials/page-header.html" %}
-    <p>Μπορείτε να μας τηλεφωνήσετε μέσω των παρακάτω αριθμών:</p>
-    <a href="tel:+30 693 233 7032">+30 693 233 7032</a>
-    <a href="tel:+30 211 182 5913">+30 211 182 5913</a>
-    <p>Αλλιώς, σας παρακαλούμε να μας στείλετε email στο <a href="mailto:info@oupspuppetry.gr">info@oupspuppetry.gr</a> ή μέσω της παρακάτω φόρμας:</p>
-  </section>
+  {% include "partials/page-header.html" %}
+  {% set showIntro = true %}
   {% include "partials/contact.html" %}
   </div>
 {% endblock %}

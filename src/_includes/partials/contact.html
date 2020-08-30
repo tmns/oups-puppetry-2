@@ -1,16 +1,24 @@
 <article class="[ contact ] [ bg-light-shade ]">
   <svg class="wavy-separator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill-opacity="1" d="M0,256L13.3,218.7C26.7,181,53,107,80,117.3C106.7,128,133,224,160,240C186.7,256,213,192,240,144C266.7,96,293,64,320,48C346.7,32,373,32,400,74.7C426.7,117,453,203,480,213.3C506.7,224,533,160,560,165.3C586.7,171,613,245,640,277.3C666.7,309,693,299,720,266.7C746.7,235,773,181,800,186.7C826.7,192,853,256,880,272C906.7,288,933,256,960,218.7C986.7,181,1013,139,1040,112C1066.7,85,1093,75,1120,90.7C1146.7,107,1173,149,1200,160C1226.7,171,1253,149,1280,128C1306.7,107,1333,85,1360,96C1386.7,107,1413,149,1427,170.7L1440,192L1440,320L1426.7,320C1413.3,320,1387,320,1360,320C1333.3,320,1307,320,1280,320C1253.3,320,1227,320,1200,320C1173.3,320,1147,320,1120,320C1093.3,320,1067,320,1040,320C1013.3,320,987,320,960,320C933.3,320,907,320,880,320C853.3,320,827,320,800,320C773.3,320,747,320,720,320C693.3,320,667,320,640,320C613.3,320,587,320,560,320C533.3,320,507,320,480,320C453.3,320,427,320,400,320C373.3,320,347,320,320,320C293.3,320,267,320,240,320C213.3,320,187,320,160,320C133.3,320,107,320,80,320C53.3,320,27,320,13,320L0,320Z"></path></svg>
-  <div class="[ contact__inner ] [ wrapper ]">
+  <div class="[ contact__inner ] [ wrapper ] [ responsive-text  color-tertiary ]">
     {% if contact.title %}
-    <div class="[ section-heading ] [ border ] [ responsive-text color-tertiary ]">
+    <div class="[ section-heading ] [ border ]">
       <h2>{{ contact.title }}</h2>
       {% if contact.paragraph %}
       <p>{{ contact.paragraph }}</p>
       {% endif %}
     </div>
     {% endif %}
+    {% if showIntro %}
+    <div class="contact__intro">
+      <p>Μπορείτε να μας τηλεφωνήσετε μέσω των παρακάτω αριθμών:</p>
+      <a href="tel:+30 693 233 7032">+30 693 233 7032</a>
+      <a href="tel:+30 211 182 5913">+30 211 182 5913</a>
+      <p>Αλλιώς, σας παρακαλούμε να μας στείλετε email στο <a href="mailto:info@oupspuppetry.gr">info@oupspuppetry.gr</a> ή μέσω της παρακάτω φόρμας:</p>
+    </div>
+    {% endif %}
     <div class="contact__form">
-      <form class="[ responsive-text color-tertiary ]" name="{{ contact.homeContact }}" method="POST" novalidate="true">
+      <form name="{{ contact.homeContact }}" method="POST" novalidate="true">
         <!-- netlify hidden input field for spam bots -->
         <input type="hidden" name="bot-field" />
         <!-- netlify hidden input field for spam bots -->
