@@ -1,9 +1,14 @@
 .dashed-section {
   padding: 7vw 0 !important;
-  border-top: 1rem dashed var(--border-color);
-  border-bottom: 1rem dashed var(--border-color);
+  border-top: .75rem dashed var(--border-color);
+  border-bottom: .75rem dashed var(--border-color);
 
   + .dashed-section {
     border-top: none;
+  }
+
+  @include media-query('md') {
+    border-top-width: 1rem;
+    border-bottom-width: 1rem;
   }
 }
