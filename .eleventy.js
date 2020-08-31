@@ -30,10 +30,15 @@ module.exports = (config) => {
       .sort((a, b) => (Number(a.fileSlug) > Number(b.fileSlug) ? 1 : -1))
   )
 
+  // Returns a list of tour dates ordered by filename
   config.addCollection('tourDates', (collection) =>
     collection.getFilteredByGlob('./src/tour-dates/*.md')
       .sort((a, b) => (Number(a.fileSlug) > Number(b.fileSlug) ? 1 : -1))
   )
+
+  // Returns all placeholders
+  config.addCollection('placeholders', (collection) =>
+    collection.getFilteredByGlob('./src/placeholders/*.md'))
 
   // Add filters
   config.addFilter('dateFilter', dateFilter)
