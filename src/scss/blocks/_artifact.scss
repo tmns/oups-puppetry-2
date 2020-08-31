@@ -1,6 +1,7 @@
 .artifact {
   .section-heading {
     margin-bottom: 7vw;
+    max-width: 90%;
   }
 
   .link-svg {
@@ -16,7 +17,13 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 1.77vw;
-    padding: 0 4.2vw;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    max-width: 90%;
+
+    &:last-child {
+      margin-bottom: 30vw;
+    }
 
     * + * {
       margin-top: 1.77vw;

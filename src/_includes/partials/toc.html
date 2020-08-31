@@ -4,7 +4,15 @@
   </div>
   <ul>
     {% for item in navItems %}
-    <li><a href="#{{ item.data.name | replace(' ', '-') | lower }}">{{ item.data.name }}</a></li>
+    <li>
+      <a href="#{{ item.data.name | replace(' ', '-') | lower }}">
+        {% if item.data.date %}
+        <b><time datetime="{{ item.data.date | w3DateFilter }}">{{ item.data.date | dateFilter }}</time></b> ~ {{ item.data.name }}
+        {% else %}
+        {{ item.data.name }}
+        {% endif %}
+      </a>
+    </li>
     {% endfor %}
   </ul>
 </nav>

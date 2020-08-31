@@ -6,8 +6,11 @@
     {% if artifact.subtitle %}
     <p>{{ artifact.subtitle }}</p>
     {% endif %}
+    {% if artifact.type %}
+    <p>{{ artifact.type }} -  <time datetime="{{ artifact.date | w3DateFilter }}">{{ artifact.date | dateFilter }}</time></p>
+    {% endif %}
   </div>
-  <div class="[ artifact__description ] [ wrapper ] [ leading-loose ]">
+  <div class="[ artifact__description ] [ leading-loose ]">
     <p>{{ artifact.description | safe }}</p>
     {% if artifact.duration %}
     <p><span>Διάρκεια:</span> {{ artifact.duration }}</p>
@@ -21,9 +24,22 @@
     {% if artifact.ages %}
     <p><span>Ηλικίες:</span> {{ artifact.ages }}</p>
     {% endif %}
+    {% if artifact.location %}
+    <p><span>Πού;</span> {{ artifact.location }}</p>
+    {% endif %}    
+    {% if artifact.time %}
+    <p><span>Τι ώρα;</span> <time datetime="{{ artifact.time }}">{{ artifact.time }}</time></p>
+    {% endif %}
+    {% if artifact.price %}
+    <p><span>Πόσο;</span> {{ artifact.price }}€</p>
+    {% endif %}     
     <a class="[ button border ]" href="#toc">πάνω</a>
+    {% if artifact.gallery %}
     <span class="photos-label">Φωτογραφίες</span>
+    {% endif %}
   </div>
+  {% if artifact.gallery %}
   {% set galleryImages = artifact.gallery %}
   {% include "partials/gallery.html" %}
+  {% endif %}
 </article>

@@ -5,6 +5,10 @@
 {% set pageHeaderSummary = heading.summary %}
 {% set collectionItems = collections[collection] %}
 
+{% if collection == 'tourDates' and collectionItems.length == 1 %}
+{% set collectionItems = collections['placeholders'] %}
+{% endif %}
+
 {% block content %}
   {% include "partials/page-header.html" %}
   {% block tocData %}{% endblock %}

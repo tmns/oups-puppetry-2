@@ -32,12 +32,15 @@ $outputTokenCSS: false;
   flex-grow: 1;
   border: .5rem dashed var(--border-color);
   margin-bottom: 4.2rem;
-  margin-right: 2.36rem;
-  margin-left: 2.36rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  max-width: 90%;
   padding: 2.36rem;
   
   @media (min-width: 1150px) {
-    border: none;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
     border-right: 1rem dashed var(--border-color);
     margin: calc(var(--space) / 2);
     padding: 0;
