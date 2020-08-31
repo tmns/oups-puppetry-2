@@ -9,8 +9,12 @@ $outputTokenCSS: false;
 
 .contact {
   &__intro {
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto 2.36vw;
+
+    @include media-query('md') {
+      max-width: 80%;
+    }
 
     a {
       text-decoration-style: dashed;
