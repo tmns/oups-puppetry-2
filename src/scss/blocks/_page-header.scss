@@ -73,20 +73,12 @@
 
   &__summary {
     transform: rotate(-2deg);
-    background: repeating-linear-gradient(50deg, hsl(221, 66%, 20.8%), hsl(221, 66%, 20.8%) 1px, hsl(335, 90.5%, 33.1%) 1px, hsl(335, 90.5%, 33.1%) 8px);
     margin-top: 19vw;
     margin-inline-end: auto;
     margin-inline-start: auto;
     --border-color: #{get-color('light')};
     max-width: 85%;
     padding: 7vw 4vw;
-
-    h2,
-    p {
-      background-image: repeating-linear-gradient(253deg, hsl(192, 94.9%, 84.5%), hsl(192, 94.9%, 84.5%) 10px, hsl(180, 100%, 99.6%) 10px, hsl(180, 100%, 99.6%) 30px);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
 
     p {
       margin-top: 4vw;
