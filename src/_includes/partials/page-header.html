@@ -8,7 +8,7 @@
       {% endfor %}
     </div>
     <div class="[ page-header__heading ] [ border bg-secondary color-primary-glare ] [ responsive-text ]">
-      <h1 class="[ headline ] {{'[ font-sans ]' if page.url == '/'}}">{{ pageHeaderTitle }}</h1>
+      <h1 class="[ headline ] {{'[ font-sans ]' if page.url == '/' or page.url == '/print-me/'}}">{{ pageHeaderTitle }}</h1>
     </div>
     {% if pageHeaderSummary %}
     <div class="[ page-header__summary ] [ border bg-quinary color-light weight-bold ] [ responsive-text ]">

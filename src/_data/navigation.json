@@ -37,6 +37,11 @@
       "url": "/contact"
     },
     {
+      "text": "Print Me!",
+      "url": "/print-me",
+      "inMoreMenu": true
+    },
+    {
       "text": "Χορηγοί",
       "url": "/sponsors",
       "inMoreMenu": true

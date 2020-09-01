@@ -1,0 +1,57 @@
+// First up: config and functions
+@import 'config';
+
+// Set Gorko to output no CSS for this file
+$outputTokenCSS: false;
+
+// Next: pull in gorko for design tokens
+@import '../../node_modules/gorko/gorko.scss';
+
+.print-me {
+  position: relative;
+  padding-bottom: 30vw;
+  --separator-color: #{get-color('secondary-shade')};
+  --border-color: #{get-color('quinary-glare')};
+
+  .wrapper {
+    padding-top: 10vw;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(445px, 1fr));
+    grid-gap: 2.36vw;
+    justify-items: center;
+  }
+
+  li {
+    max-width: 600px;
+
+    &:hover {
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    @keyframes shake {
+      10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }      
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+      40%, 60% {
+        transform: translate3d(4px, 0, 0);
+      }
+    }
+  }
+
+  img {
+    clip-path: polygon(50% 0%, 99% 4%, 100% 26%, 100% 70%, 95% 96%, 50% 100%, 3% 96%, 0% 70%, 0% 35%, 2% 4%);th: 500px;
+  }
+}
+
+// Pull in utilities
+@import 'utilities/dashed-section';
