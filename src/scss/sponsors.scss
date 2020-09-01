@@ -29,8 +29,5 @@ $outputTokenCSS: false;
   }
 }
 
-// Pull in blocks
-@import 'blocks/gallery';
-
 // Pull in utilities
 @import 'utilities/dashed-section';
