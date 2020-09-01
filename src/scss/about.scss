@@ -7,10 +7,6 @@ $outputTokenCSS: false;
 // Next: pull in gorko for design tokens
 @import '../../node_modules/gorko/gorko.scss';
 
-.about {
-  position: relative;
-}
-
 // Pull in blocks
 @import 'blocks/about-intro.scss';
 @import 'blocks/about-people.scss';
