@@ -13,9 +13,13 @@ $outputTokenCSS: false;
 
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+    grid-template-columns: 1fr;
     grid-gap: 2.36vw;
     justify-items: center;
+
+    @include media-query('md') {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   li {
