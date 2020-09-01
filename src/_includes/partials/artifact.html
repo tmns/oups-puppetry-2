@@ -13,29 +13,29 @@
   <div class="[ artifact__description ] [ leading-loose ]">
     <p>{{ artifact.description | safe }}</p>
     {% if artifact.duration %}
-    <p><span>Διάρκεια:</span> {{ artifact.duration }}</p>
+    <p><span class="weight-bold">Διάρκεια:</span> {{ artifact.duration }}</p>
     {% endif %}
     {% if artifact.music %}
-    <p><span>Μουσική:</span> {{ artifact.music }}</p>
+    <p><span class="weight-bold">Μουσική:</span> {{ artifact.music }}</p>
     {% endif %}
     {% if artifact.materials %}
-    <p><span>Τεχνιτή:</span> {{ artifact.materials }}</p>
+    <p><span class="weight-bold">Τεχνιτή:</span> {{ artifact.materials }}</p>
     {% endif %}                              
     {% if artifact.ages %}
-    <p><span>Ηλικίες:</span> {{ artifact.ages }}</p>
+    <p><span class="weight-bold">Ηλικίες:</span> {{ artifact.ages }}</p>
     {% endif %}
     {% if artifact.location %}
-    <p><span>Πού;</span> {{ artifact.location }}</p>
+    <p><span class="weight-bold">Πού;</span> {{ artifact.location }}</p>
     {% endif %}    
     {% if artifact.time %}
-    <p><span>Τι ώρα;</span> <time datetime="{{ artifact.time }}">{{ artifact.time }}</time></p>
+    <p><span class="weight-bold">Τι ώρα;</span> <time datetime="{{ artifact.time }}">{{ artifact.time }}</time></p>
     {% endif %}
     {% if artifact.price %}
-    <p><span>Πόσο;</span> {{ artifact.price }}€</p>
+    <p><span class="weight-bold">Πόσο;</span> {{ artifact.price }}€</p>
     {% endif %}     
     <a class="[ button border ]" href="#toc">πάνω</a>
     {% if artifact.gallery %}
-    <span class="photos-label">Φωτογραφίες</span>
+    <span class="photos-label weight-bold">Φωτογραφίες</span>
     {% endif %}
   </div>
   {% if artifact.gallery %}

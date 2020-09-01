@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   line-height: 1;
-  font-weight: 900;
   margin-top: -#{get-size('400')};
   margin-inline-start: -#{get-size('400')};
 
@@ -55,7 +54,6 @@
     display: none;
     padding-top: get-size('400');
     padding-inline-start: get-size('400');
-    font-weight: 900;
     line-height: 1.5;
 
     > a {
@@ -82,7 +80,6 @@
     float: right;
     max-width: 170px;
     max-width: min-content;
-    font-weight: 900;
     color: get-color('primary-glare');
 
     ul {

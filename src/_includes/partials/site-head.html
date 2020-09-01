@@ -1,7 +1,7 @@
 <a class="[ skip-link ] [ button ]" href="#main-content">Skip to content</a>
 <header role="banner" class="[ site-head ] [ bg-primary-glare color-secondary-shade ]">
   <div class="wrapper">
-    <nav class="[ nav ] [ site-head__nav ]" aria-label="Primary">
+    <nav class="[ nav ] [ site-head__nav ] [ weight-bold ]" aria-label="Primary">
       <a href="/" aria-label="{{ site.name }} - home" class="site-head__brand">
         {% include "partials/brand.svg" %}
       </a>
@@ -14,7 +14,7 @@
           {% endfor %}
         </ul>
       </div>
-      <div class="nav__more-option">
+      <div class="[ nav__more-option ] [ weight-bold ]">
         <a href="#nav__more" role="button" aria-haspopup="true" aria-expanded="false">
           <span class="visually-hidden">Άλλα</span>
           <span class="nav__more-option-text" aria-hidden="true">
@@ -24,7 +24,7 @@
         </a>
       </div>        
     </nav> 
-    <div id="nav__more" class="nav__more" style="display: none;">
+    <div id="nav__more" class="[ nav__more ] [ weight-bold ]" style="display: none;">
       <ul class="nav__more-list">
         {% for item in navigation.items %}
         <li class="{{'nav__more-item-hidden' if not item.inMoreMenu}}">
