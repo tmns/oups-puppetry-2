@@ -8,14 +8,8 @@ $outputTokenCSS: false;
 @import '../../node_modules/gorko/gorko.scss';
 
 .print-me {
-  position: relative;
-  padding-bottom: 30vw;
   --separator-color: #{get-color('secondary-shade')};
   --border-color: #{get-color('quinary-glare')};
-
-  .wrapper {
-    padding-top: 10vw;
-  }
 
   ul {
     display: grid;
@@ -49,7 +43,7 @@ $outputTokenCSS: false;
   }
 
   img {
-    clip-path: polygon(50% 0%, 99% 4%, 100% 26%, 100% 70%, 95% 96%, 50% 100%, 3% 96%, 0% 70%, 0% 35%, 2% 4%);th: 500px;
+    clip-path: polygon(50% 0%, 99% 4%, 100% 26%, 100% 70%, 95% 96%, 50% 100%, 3% 96%, 0% 70%, 0% 35%, 2% 4%);
   }
 }
 

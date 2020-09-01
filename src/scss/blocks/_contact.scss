@@ -1,15 +1,9 @@
 .contact {
-  position: relative;
-  padding-bottom: 30vw;
   --separator-color: #{get-color('light-shade')};
   --border-color: #{get-color('tertiary')};
 
   .section-heading {
     margin-bottom: 7vw;
-  }
-
-  &__inner {
-    padding-top: 10vw;
   }
 
   &__form {

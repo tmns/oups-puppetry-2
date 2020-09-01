@@ -1,16 +1,10 @@
 @use 'mixins/image-clip-path';
 
 .about__intro {
-  position: relative;
-  padding-bottom: 30vw;
   --separator-color: #{get-color('dark-glare')};
 
-  &--inner {
-    padding-top: 10vw;
-
-    div + div {
-      margin-top: 1.33vw;
-    }
+  &--item + &--item {
+    margin-top: 1.33vw;
   }
 
   &--item {

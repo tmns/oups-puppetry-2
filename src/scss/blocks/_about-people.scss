@@ -1,14 +1,8 @@
 @use 'mixins/image-clip-path';
 
 .about__people {
-  position: relative;
-  padding-bottom: 30vw;
   --separator-color: #{get-color('quinary')};
   --border-color: #{get-color('secondary-shade')};
-
-  &--inner {
-    padding-top: 10vw;
-  }
 
   ol {
     list-style: none;

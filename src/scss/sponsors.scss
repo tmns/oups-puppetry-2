@@ -8,8 +8,6 @@ $outputTokenCSS: false;
 @import '../../node_modules/gorko/gorko.scss';
 
 .sponsors {
-  position: relative;
-  padding-bottom: 30vw;
   --separator-color: #{get-color('dark-shade')};
   --border-color: #{get-color('primary-glare')};
 

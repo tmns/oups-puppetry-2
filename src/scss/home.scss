@@ -19,5 +19,6 @@ $outputTokenCSS: false;
 @import 'blocks/contact';
 
 // Pull in utilities
+@import 'utilities/section-container';
 @import 'utilities/dashed-section';
 @import 'utilities/dance';

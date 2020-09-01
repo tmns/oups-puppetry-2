@@ -1,14 +1,8 @@
 @use 'mixins/image-clip-path';
 
 .gallery {
-  position: relative;
-  padding-bottom: 30vw;
   background-color: var(--background-color);
   color: var(--text-color);
-
-  &__inner {
-    padding-top: 10vw;
-  }
 
   ul {
     display: grid;
