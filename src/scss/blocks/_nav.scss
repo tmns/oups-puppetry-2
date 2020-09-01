@@ -97,6 +97,7 @@
 
       > li {
         padding-bottom: get-size('400');
+        white-space: nowrap;
         
         &:hover {
           transform: rotate(-3deg);
