@@ -10,7 +10,7 @@
     <p>{{ artifact.type }} -  <time datetime="{{ artifact.date | w3DateFilter }}">{{ artifact.date | dateFilter }}</time></p>
     {% endif %}
   </div>
-  <div class="[ artifact__description ] [ leading-loose ]">
+  <div class="[ artifact__description flow ] [ leading-loose ]">
     <p>{{ artifact.description | safe }}</p>
     {% if artifact.duration %}
     <p><span class="weight-bold">Διάρκεια:</span> {{ artifact.duration }}</p>

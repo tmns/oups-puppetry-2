@@ -10,10 +10,7 @@ $outputTokenCSS: false;
 .sponsors {
   --separator-color: #{get-color('dark-shade')};
   --border-color: #{get-color('primary-glare')};
-
-  li + li {
-    margin-top: 1.77vw;
-  }
+  --flow-space: 1.77vw;
 
   img {
     width: 80%;

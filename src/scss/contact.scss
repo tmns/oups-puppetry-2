@@ -11,6 +11,7 @@ $outputTokenCSS: false;
   &__intro {
     max-width: 90%;
     margin: 0 auto 2.36vw;
+    --flow-space: 1.33vw;
 
     @include media-query('md') {
       max-width: 80%;
@@ -23,10 +24,6 @@ $outputTokenCSS: false;
         text-decoration-style: solid;
         color: get-color('tertiary-shade');
       }  
-    }
-
-    * + * {
-      margin-top: 1.33vw;
     }
   }
 

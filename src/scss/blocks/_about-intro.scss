@@ -2,10 +2,7 @@
 
 .about__intro {
   --separator-color: #{get-color('dark-glare')};
-
-  &--item + &--item {
-    margin-top: 1.33vw;
-  }
+  --flow-space: 1.33vw;
 
   &--item {
     display: flex;
