@@ -44,6 +44,24 @@ module.exports = (config) => {
   config.addFilter('dateFilter', dateFilter)
   config.addFilter('w3DateFilter', w3DateFilter)
 
+  // Filter that helps debugging potentially circular objects
+  config.addFilter('dump', obj => {
+    const getCircularReplacer = () => {
+      const seen = new WeakSet();
+      return (key, value) => {
+        if (typeof value === "object" && value !== null) {
+          if (seen.has(value)) {
+            return;
+          }
+          seen.add(value);
+        }
+        return value;
+      };
+    };
+  
+    return JSON.stringify(obj, getCircularReplacer(), 4);
+  });
+
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
 
