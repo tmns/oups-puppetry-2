@@ -5,6 +5,8 @@
 {% set pageHeaderSummary = heading.summary %}
 {% set collectionItems = collections[collection] %}
 
+{# If there is only one tourDate item, this means we only have our template tour date
+   present. Thus, we need to render the place holder (no upcoming dates) instead. #}
 {% if collection == 'tourDates' and collectionItems.length == 1 %}
 {% set collectionItems = collections['placeholders'] %}
 {% endif %}
