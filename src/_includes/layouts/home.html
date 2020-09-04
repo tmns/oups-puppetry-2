@@ -1,8 +1,6 @@
 {% extends "layouts/base.html" %}
 {% set pageCriticalStyles = ['css/home.css'] %}
-{% set pageCriticalJS %}
-  {% include "js/validateContactForm.js" %}
-{% endset %}
+{% set pageCriticalJS = ['js/playCharSounds.js', 'js/validateContactForm.js']%}
 
 {% set pageHeaderTitle = heading.title %}
 {% set pageHeaderSummary = heading.summary %}

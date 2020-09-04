@@ -3,7 +3,13 @@
     <div class="characters">
       {% for character in characters.items %}
       {% if page.url == '/' or character.url == page.url %}
-      <a class="character character-{{ loop.index }} {{ character.animation }}" href="{{ character.url }}">{% include character.svg %}</a>
+      <a 
+        class="character character-{{ loop.index }} {{ character.animation if page.url == '/'}}" 
+        href="{{ character.url }}"
+        data-sound="{{ loop.index }}" 
+      >
+        {% include character.svg %}
+      </a>
       {% endif %}
       {% endfor %}
     </div>

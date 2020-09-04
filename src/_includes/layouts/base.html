@@ -51,9 +51,15 @@
 
         {% if pageCriticalJS %}
         // Now, any JS needed for the specific page we are on
-        {{ pageCriticalJS | jsmin | safe }}
+        {% for file in pageCriticalJS %}
+        {% set js %}
+        {% include file %}
+        {% endset %}
+        
+        {{ js | jsmin | safe }}
+        {% endfor %}
         {% endif %}
       });
     </script>
   </body>
-</html>
+</html> 
