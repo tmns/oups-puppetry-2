@@ -22,6 +22,14 @@
     max-width: 90%;
     --flow-space: 1.77vw;
 
+    p:first-child::first-letter {
+      font-size: 1.77rem;
+
+      @include media-query('lg') {
+        font-size: 3.15vw;
+      }
+    }
+
     &:last-child {
       margin-bottom: 30vw;
     }

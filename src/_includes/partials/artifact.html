@@ -12,7 +12,7 @@
     {% endif %}
   </div>
   <div class="[ artifact__description flow ] [ leading-loose ]">
-    <p>{{ artifactDescription | safe }}</p>
+    {{ artifactDescription | safe }}
     {% if artifact.duration %}
     <p><span class="weight-bold">Διάρκεια:</span> {{ artifact.duration }}</p>
     {% endif %}
