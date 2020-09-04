@@ -2,35 +2,43 @@
   "items": [
     {
       "svg": "partials/characters/1.svg",
-      "url": "/gallery/"
+      "url": "/gallery/",
+      "animation": "wobble"
     },
     {
       "svg": "partials/characters/2.svg",
-      "url": "/workshops/"
+      "url": "/workshops/",
+      "animation": "tada"
     },
     {
       "svg": "partials/characters/3.svg",
-      "url": "/shows/"
+      "url": "/shows/",
+      "animation": "bounce"
     },
     {
       "svg": "partials/characters/4.svg",
-      "url": "/seminars/"
+      "url": "/seminars/",
+      "animation": "swing"
     },
     {
       "svg": "partials/characters/5.svg",
-      "url": "/logo/"
+      "url": "/logo/",
+      "animation": "jello"
     },
     {
       "svg": "partials/characters/6.svg",
-      "url": "/contact/"
+      "url": "/contact/",
+      "animation": "heartBeat"
     },
     {
       "svg": "partials/characters/7.svg",
-      "url": "/tour-dates/"
+      "url": "/tour-dates/",
+      "animation": "rubberBand"
     },
     {
       "svg": "partials/characters/8.svg",
-      "url": "/about/"
+      "url": "/about/",
+      "animation": "shake"
     }
   ]
 }
