@@ -146,7 +146,7 @@
 
         {% if pageCriticalJS %}
         // Now, any JS needed for the specific page we are on
-        {{ pageCriticalJS | safe }}
+        {{ pageCriticalJS | jsmin | safe }}
         {% endif %}
       });
     </script>

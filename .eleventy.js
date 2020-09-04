@@ -1,6 +1,7 @@
 const dateFilter = require('./src/filters/date-filter.js')
 const w3DateFilter = require('./src/filters/w3-date-filter.js')
 const htmlMinTransform = require('./src/transforms/html-min-transform')
+const { minify } = require('terser')
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -8,6 +9,16 @@ module.exports = (config) => {
   // Minify html, inline css, & inline js if we are in prod
   if (isProduction) {
     config.addTransform('htmlmin', htmlMinTransform)
+
+    config.addNunjucksAsyncFilter('jsmin', async (code, cb) => {
+      try {
+        const minified = await minify(code)
+        cb(null, minified.code)
+      } catch (err) {
+        console.log(`Terser error: ${err}`)
+        cb(null, code)
+      }
+    })
   }
 
   // Returns a list of people ordered by filename
