@@ -6,20 +6,25 @@ const { minify } = require('terser')
 const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = (config) => {
-  // Minify html, inline css, & inline js if we are in prod
+  // Minify html & inline css
   if (isProduction) {
     config.addTransform('htmlmin', htmlMinTransform)
+  }
 
-    config.addNunjucksAsyncFilter('jsmin', async (code, cb) => {
+  // Minify inline js if we're in prod
+  config.addNunjucksAsyncFilter('jsmin', async (code, cb) => {
+    if (!isProduction) {
+      cb(null, code)
+    } else {
       try {
         const minified = await minify(code)
         cb(null, minified.code)
       } catch (err) {
         console.log(`Terser error: ${err}`)
         cb(null, code)
-      }
-    })
-  }
+      }  
+    }
+  })
 
   // Returns a list of people ordered by filename
   config.addCollection('people', (collection) =>
