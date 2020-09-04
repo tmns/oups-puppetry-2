@@ -41,9 +41,10 @@
       {% include "partials/footer.html" %}
     </div>
 
-    {# Some Javascript necessary for the responsive nav #}
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function() {
+        // First some JS for a our responsive nav...
+        //
         // Since we're able to run JS, our first task is to gracefully
         // upgrade our navbar. We must:
         //  1) Remove nowrap from the list so our items don't simply wrap
@@ -142,6 +143,11 @@
           // to `scroll` in order for the user to still access all the nav items.
           navListContainer.style.overflowX = 'scroll';
         }
+
+        {% if pageCriticalJS %}
+        // Now, any JS needed for the specific page we are on
+        {{ pageCriticalJS | safe }}
+        {% endif %}
       });
     </script>
   </body>

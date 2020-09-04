@@ -25,6 +25,7 @@
   span,
   label,
   input,
+  button,
   textarea,
   figcaption {
     font-size: get-size('400');
@@ -32,5 +33,13 @@
     @include media-query('lg') {
       font-size: 1.77vw;
     }  
+  }
+
+  div[id*=error] {
+    font-size: get-size('300');
+
+    @include media-query('lg') {
+      font-size: 1.33vw;
+    }
   }
 }

@@ -26,8 +26,13 @@
       margin-top: .77vw;
     }
 
-    div[id*=error] + label {
-      margin-top: 1.33vw;
+    div[id*=error] {
+      margin-top: .77vw;
+      padding: .77vw;
+
+      + label {
+        margin-top: 1.33vw;
+      }
     }
 
     label {
