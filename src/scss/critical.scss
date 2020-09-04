@@ -34,6 +34,11 @@ main:focus {
   outline: none;
 }
 
+// Keeps alt text from being visible when lazy loading
+img[loading=lazy] {
+  color: transparent;
+}
+
 h1,
 h2,
 h3,
