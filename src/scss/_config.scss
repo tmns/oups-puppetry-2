@@ -69,11 +69,6 @@ $gorko-config: (
     'output': 'standard',
     'property': 'color',
   ),
-  'flow-space': (
-    'items': $gorko-size-scale,
-    'output': 'standard',
-    'property': '--flow-space',
-  ),
   'font': (
     'items': (
       'base': '"Literata", Georgia, serif',
