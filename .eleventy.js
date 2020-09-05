@@ -8,9 +8,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 module.exports = (config) => {
   // Set directories to pass through to the dist folder
   config.addPassthroughCopy('./src/sounds/')
-  if (!isProduction) {
-    config.addPassthroughCopy('./src/images/')
-  }
+  // config.addPassthroughCopy('./src/images/')
 
   // Minify html & inline css
   if (isProduction) {
