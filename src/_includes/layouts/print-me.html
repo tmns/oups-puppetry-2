@@ -16,7 +16,7 @@
       <ul class="dashed-section">
         {% for image in images %}
         <li>
-          <a href="{{ image.url }}" download="{{ image.alt }}.jpg">
+          <a href="{{ image.url }}" download="{{ loop.index }}.jpg">
             <img
               src="{{ image.url }}" 
               alt="{{ image.alt }}" 
