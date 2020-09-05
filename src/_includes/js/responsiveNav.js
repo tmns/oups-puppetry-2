@@ -11,10 +11,8 @@ var navListContainer = document.querySelector('.nav__list')
 navListContainer.firstElementChild.style.flexWrap = 'nowrap'
 
 var items = navListContainer.querySelectorAll('li')
-items[items.length - 1].classList.add('nav__list-item-hidden')
 
 var moreMenuOption = document.querySelector('.nav__more-option')
-moreMenuOption.style.display = 'block'
 
 // Now, we continue on with setting up the functionality of
 // the `more` menuu item (ie, opening / closing it).
