@@ -7,6 +7,29 @@ $outputTokenCSS: false;
 // Next: pull in gorko for design tokens
 @import '../../node_modules/gorko/gorko.scss';
 
+.sound-btn {
+  display: none;
+  margin: 0 50%;
+  padding: 0;
+  border: medium none;
+  background: transparent none repeat scroll 0% 0%;
+  cursor: pointer;
+  border-radius: 5px;
+
+  @include media-query('lg') {
+    &.js-enabled {
+      display: inline-block;
+    }
+  }
+  
+  svg {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    fill: get-color('secondary-shade');
+  }
+}
+
 .gallery {
   --separator-color: #{get-color('secondary')};
   --background-color: #{get-color('secondary')};
