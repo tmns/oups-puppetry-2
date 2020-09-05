@@ -6,6 +6,8 @@
 
 @import 'reset';
 
+@import '../fonts/fonts.css';
+
 // Global styles start
 :root {
   --flow-space: #{get-size('600')};

@@ -7,6 +7,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = (config) => {
   // Set directories to pass through to the dist folder
+  config.addPassthroughCopy('./src/fonts/')
   config.addPassthroughCopy('./src/sounds/')
   // config.addPassthroughCopy('./src/images/')
 
