@@ -8,6 +8,7 @@
 {% set siteTitle = site.name %}
 {% set currentUrl = site.url + page.url %}
 
+
 {# If the page’s Front Matter has specific metaTitle and/or metaDesc items, switch 
   them into the mix. #}
 {% if metaTitle %}
@@ -18,6 +19,7 @@
   {% set metaDesc = summary %}
 {% endif %}
 
+{% set socialImage = site.url + '/images/meta/social-share.png' %} 
 
 <title>{{ pageTitle }}</title>
 <link rel="canonical" href="{{ currentUrl }}" />
@@ -31,8 +33,8 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="og:image" content="{{ socialImage }}" />
 <meta name="twitter:image" content="{{ socialImage }}" />
-<meta property="og:image:alt" content="Page image for {{ site.name }}" />
-<meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
+<meta property="og:image:alt" content="Εικόνα για το σάιτ του {{ site.name }}" />
+<meta name="twitter:image:alt" content="Εικόνα για το σάιτ του {{ site.name }}" />
 {% endif %}
 
 {% if metaDesc %}
@@ -40,3 +42,11 @@
 <meta name="twitter:description" content="{{ metaDesc }}" />
 <meta property="og:description" content="{{ metaDesc }}" />
 {% endif %}
+
+<link rel="apple-touch-icon" sizes="180x180" href="images/meta/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/meta/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/meta/favicon-16x16.png">
+<link rel="manifest" href="images/meta/site.webmanifest">
+<link rel="mask-icon" href="images/meta/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">

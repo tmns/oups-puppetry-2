@@ -1,5 +1,5 @@
 ---
-title: 'Home'
+title: 'Αρχική'
 layout: 'layouts/home.html'
 metaDesc: 'Καλώς ήρθατε στο ψηφιακό καταφύγιο του ΟΥΠΣ! του κουκλοθεάτρου.'
 heading:
