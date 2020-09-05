@@ -18,7 +18,7 @@
     </div>
     {% endif %}
     <div class="contact__form">
-      <form name="{{ contact.homeContact }}" method="POST" novalidate="true">
+      <form name="{{ contact.homeContact }}" method="POST" novalidate="true" netlify-honeypot="bot-field" data-netlify="true">
         <!-- netlify hidden input field for spam bots -->
         <input type="hidden" name="bot-field" />
         <!-- netlify hidden input field for spam bots -->
