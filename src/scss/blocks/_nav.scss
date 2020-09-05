@@ -10,7 +10,7 @@
 
     ul {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       list-style: none;
 
       > * {
@@ -54,7 +54,7 @@
   &__more-option {
     display: block;
     padding-top: 1.22rem;
-    padding-inline-start: get-size('400');
+    padding-inline-start: get-size('900');
     line-height: 1.5;
 
     > a {

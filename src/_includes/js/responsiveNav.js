@@ -7,11 +7,10 @@
 //  2) Hide the last item of our nav list, as we always want the
 //     last (& typically least important) item to be hidden by default.
 //  3) Set `display: block` on our `more` menu item so that it's visible.
+// ^^ UPDATE: in practice this creates a very janky experience :(
+//    So for now I am setting all defaults assuming JS exists.
 var navListContainer = document.querySelector('.nav__list')
-navListContainer.firstElementChild.style.flexWrap = 'nowrap'
-
 var items = navListContainer.querySelectorAll('li')
-
 var moreMenuOption = document.querySelector('.nav__more-option')
 
 // Now, we continue on with setting up the functionality of
