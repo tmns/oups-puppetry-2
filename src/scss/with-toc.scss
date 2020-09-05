@@ -9,8 +9,8 @@ $outputTokenCSS: false;
 
 .with-toc {
   position: relative;
-  --separator-color: #{get-color('quinary-glare')};
-  --background-color: #{get-color('quinary-glare')};
+  --separator-color: #{get-color('quinary')};
+  --background-color: #{get-color('quinary')};
   --color: #{get-color('light-glare')};
   --border-color: #{get-color('light-glare')};
   --space: 1rem;

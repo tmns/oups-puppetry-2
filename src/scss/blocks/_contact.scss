@@ -1,6 +1,7 @@
 .contact {
   --separator-color: #{get-color('light-shade')};
-  --border-color: #{get-color('tertiary')};
+  --border-color: #{get-color('tertiary-shade')};
+  --color: #{get-color('tertiary-shade')};
 
   .section-heading {
     margin-bottom: 7vw;
@@ -43,7 +44,7 @@
     textarea {
       display: inline-block;
       background: transparent;
-      border: 2px dashed get-color('tertiary');
+      border: 2px dashed var(--border-color);
       padding: 1vw;
       width: 100%;
       color: inherit;
@@ -59,7 +60,6 @@
 
     button {
       margin-top: 1.33vw;
-      --color: #{get-color('tertiary')};
     }
 
     img {

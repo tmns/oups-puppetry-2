@@ -1,7 +1,7 @@
 @use 'mixins/image-clip-path';
 
 .about__people {
-  --separator-color: #{get-color('quinary')};
+  --separator-color: #{get-color('quinary-glare')};
   --border-color: #{get-color('secondary-shade')};
 
   ol {
