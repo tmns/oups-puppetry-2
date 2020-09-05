@@ -6,7 +6,8 @@
 {% endif %}
 
 {% set siteTitle = site.name %}
-{% set currentUrl = 'https://oupspuppetry.gr' + page.url %}
+{% set siteUrl = 'https://oupspuppetry.gr' %}
+{% set currentUrl = siteUrl + page.url %}
 
 
 {# If the page’s Front Matter has specific metaTitle and/or metaDesc items, switch 
@@ -19,7 +20,7 @@
   {% set metaDesc = summary %}
 {% endif %}
 
-{% set socialImage = site.url + '/images/meta/social-share.png' %} 
+{% set socialImage = siteUrl + '/images/meta/social-share.png' %} 
 
 <title>{{ pageTitle }}</title>
 <link rel="canonical" href="{{ currentUrl }}" />
