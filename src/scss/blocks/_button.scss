@@ -1,5 +1,4 @@
 .button {
-  @include apply-utility('font', 'sans');
   @include apply-utility('weight', 'bold');
   display: inline-block;
   transition: all 0.05s ease-in;
@@ -7,7 +6,6 @@
   cursor: pointer;
   padding: 0.5rem 2rem;
   text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
   color: var(--color);
 
