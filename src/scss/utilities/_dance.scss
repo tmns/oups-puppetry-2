@@ -1,10 +1,18 @@
 .dance {
-  animation: dance calc(var(--duration) * 2) calc(var(--i) * (var(--duration) / -3)) steps(3, end) infinite;
-
   @keyframes dance {
-    25%  { transform: translate(-5%,  5%) scale(1.05) rotate(-5deg) }
-    50%  { transform: translate( 5%, -2%) rotate( 2deg) }
-    75%  { transform: translate(10%,  0%) scale(1.02) rotate( 8deg) }
-    100% { transform: translate( 0%, -5%) rotate( 4deg) }
+    25% {
+      transform: translate(-5%, 5%) scale(1.05) rotate(-5deg);
+    }
+    50% {
+      transform: translate(5%, -2%) rotate(2deg);
+    }
+    75% {
+      transform: translate(10%, 0%) scale(1.02) rotate(8deg);
+    }
+    100% {
+      transform: translate(0%, -5%) rotate(4deg);
+    }
   }
+  animation: dance calc(var(--duration) * 2)
+    calc(var(--i) * (var(--duration) / -3)) steps(3, end) infinite;
 }

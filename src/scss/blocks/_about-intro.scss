@@ -6,9 +6,9 @@
 
   &--item {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 
     &:nth-child(2) {
       flex-direction: row-reverse;
@@ -18,14 +18,14 @@
       border: 2px dashed #{get-color('light-shade')};
 
       img {
-        width: 100%;
         @include image-clip-path.apply-class('about__intro--image', 2)
-      }      
+      ;
+        width: 100%;}      
     }
 
     figure + p {
-      margin: 1.77vw 0;
       flex-basis: 45ch;
+      margin: 1.77vw 0;
     }
 
     &:last-child {

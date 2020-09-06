@@ -1,14 +1,13 @@
 .section-heading {
+  @include media-query('md') {
+    max-width: 80%;
+  }
+  transform: rotate(-2deg);
   margin: 0 auto 10vw auto;
   padding: 4vw;
-  transform: rotate(-2deg);
   max-width: 90%;
 
   > p {
     margin-top: get-size('400');
-  }
-
-  @include media-query('md') {
-    max-width: 80%;
   }
 }

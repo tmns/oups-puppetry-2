@@ -8,13 +8,13 @@
 
     h2 {
       padding: 1vw;
-    }  
+    }
   }
 
   ul {
+    --flow-space: 1.33vw;
     padding-left: 0;
     list-style: none;
-    --flow-space: 1.33vw;
 
     a {
       text-decoration-color: var(--color);
@@ -22,12 +22,12 @@
 
       &:hover,
       &:visited {
-        color: get-color('light-shade');
         text-decoration-color: get-color('light-shade');
+        color: get-color('light-shade');
 
-      &:hover {
-        text-decoration-style: solid;
-      }
+        &:hover {
+          text-decoration-style: solid;
+        }
       }
     }
   }

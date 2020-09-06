@@ -1,19 +1,18 @@
 .button {
-  display: inline-block;
-  padding: 0.5rem 2rem;
-  background: transparent;
-  color: var(--color);
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  transition: all .05s ease-in;
-  cursor: pointer;
-
   @include apply-utility('font', 'sans');
   @include apply-utility('weight', 'bold');
+  display: inline-block;
+  transition: all 0.05s ease-in;
+  background: transparent;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color);
 
   &:hover {
-    box-shadow: 2px 2px 0 var(--color);
     transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--color);
   }
 }

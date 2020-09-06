@@ -9,13 +9,13 @@ $outputTokenCSS: false;
 
 .contact {
   &__intro {
-    max-width: 90%;
-    margin: 0 auto 2.36vw;
     --flow-space: 1.33vw;
 
     @include media-query('md') {
       max-width: 80%;
     }
+    margin: 0 auto 2.36vw;
+    max-width: 90%;
 
     a {
       text-decoration-style: dashed;
@@ -23,7 +23,7 @@ $outputTokenCSS: false;
       &:hover {
         text-decoration-style: solid;
         color: get-color('tertiary');
-      }  
+      }
     }
   }
 

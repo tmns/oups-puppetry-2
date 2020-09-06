@@ -13,14 +13,13 @@ $outputTokenCSS: false;
   --flow-space: 1.77vw;
 
   img {
-    width: 80%;
-    margin: 0 auto;
-    padding: 1rem;
-    border: 2px dashed var(--border-color);
-
     @include media-query('md') {
       width: 50%;
     }
+    margin: 0 auto;
+    border: 2px dashed var(--border-color);
+    padding: 1rem;
+    width: 80%;
   }
 }
 

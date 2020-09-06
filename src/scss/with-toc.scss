@@ -8,12 +8,12 @@ $outputTokenCSS: false;
 @import '../../node_modules/gorko/gorko.scss';
 
 .with-toc {
-  position: relative;
   --separator-color: #{get-color('quinary')};
   --background-color: #{get-color('quinary')};
   --color: #{get-color('light-glare')};
   --border-color: #{get-color('light-glare')};
   --space: 1rem;
+  position: relative;
 
   &__inner {
     display: flex;
@@ -28,23 +28,22 @@ $outputTokenCSS: false;
 }
 
 .toc-container {
-  flex-basis: 35rem;
-  flex-grow: 1;
-  border: .5rem dashed var(--border-color);
-  margin-bottom: 4.2rem;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  max-width: 90%;
-  padding: 2.36rem;
-  
   @media (min-width: 1150px) {
+    margin: calc(var(--space) / 2);
     border-top: 0;
+    border-right: 1rem dashed var(--border-color);
     border-bottom: 0;
     border-left: 0;
-    border-right: 1rem dashed var(--border-color);
-    margin: calc(var(--space) / 2);
     padding: 0;
   }
+  flex-basis: 35rem;
+  flex-grow: 1;
+  margin-bottom: 4.2rem;
+  border: 0.5rem dashed var(--border-color);
+  padding: 2.36rem;
+  max-width: 90%;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 }
 
 .artifacts-container {

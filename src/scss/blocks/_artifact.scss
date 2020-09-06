@@ -14,20 +14,19 @@
   }
 
   &__description {
+    --flow-space: 1.77vw;
     display: flex;
     flex-direction: column;
     margin-bottom: 1.77vw;
+    max-width: 90%;
     margin-inline-start: auto;
     margin-inline-end: auto;
-    max-width: 90%;
-    --flow-space: 1.77vw;
 
     p:first-child::first-letter {
-      font-size: 1.77rem;
-
       @include media-query('lg') {
         font-size: 3.15vw;
       }
+      font-size: 1.77rem;
     }
 
     &:last-child {
@@ -37,7 +36,7 @@
     span {
       transform: rotate(-2deg);
       background: var(--color);
-      padding: .33vw;
+      padding: 0.33vw;
       color: var(--background-color);
     }
 

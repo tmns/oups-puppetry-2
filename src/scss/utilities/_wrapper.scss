@@ -4,9 +4,9 @@
  * centers the contents
  */
 .wrapper {
-  max-width: 90rem;
-  padding: 0 get-size('500');
-  margin-left: auto;
-  margin-right: auto;
   position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 get-size('500');
+  max-width: 90rem;
 }

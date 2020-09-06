@@ -8,20 +8,19 @@ $outputTokenCSS: false;
 @import '../../node_modules/gorko/gorko.scss';
 
 .sound-btn {
-  display: none;
-  margin: 0 50%;
-  padding: 0;
-  border: medium none;
-  background: transparent none repeat scroll 0% 0%;
-  cursor: pointer;
-  border-radius: 5px;
-
   @include media-query('lg') {
     &.js-enabled {
       display: inline-block;
     }
   }
-  
+  display: none;
+  margin: 0 50%;
+  border: medium none;
+  border-radius: 5px;
+  background: transparent none repeat scroll 0% 0%;
+  cursor: pointer;
+  padding: 0;
+
   svg {
     width: 30px;
     height: 30px;

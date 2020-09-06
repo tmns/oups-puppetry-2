@@ -1,26 +1,25 @@
 .site-head {
-  padding: get-size('800') 0;
-
-  &__brand {
-    padding-inline-start: get-size('600');
-    margin-inline-end: get-size('600');
-    transform: rotate(-10deg);
-
-    svg {
-      fill: get-color('secondary-shade');
-      width: 80px;
-    }
-  }
-
-  &__nav {
-    padding: get-size('300') 0;
-  }
-
   @include media-query('md') {
     &__brand {
       svg {
         width: 105px;
       }
     }
+  }
+  padding: get-size('800') 0;
+
+  &__brand {
+    transform: rotate(-10deg);
+    padding-inline-start: get-size('600');
+    margin-inline-end: get-size('600');
+
+    svg {
+      width: 80px;
+      fill: get-color('secondary-shade');
+    }
+  }
+
+  &__nav {
+    padding: get-size('300') 0;
   }
 }
