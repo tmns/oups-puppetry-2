@@ -1,6 +1,6 @@
 .videos {
-  --separator-color: #{get-color('secondary-glare')};
-  --border-color: #{get-color('light')};
+  --background-color: #{get-color('secondary-glare')};
+  --color: #{get-color('light')};
 
   ul {
     display: grid;

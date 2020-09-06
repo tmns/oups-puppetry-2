@@ -30,10 +30,8 @@ $outputTokenCSS: false;
 }
 
 .gallery {
-  --separator-color: #{get-color('secondary')};
   --background-color: #{get-color('secondary')};
-  --border-color: #{get-color('quaternary-shade')};
-  --text-color: #{get-color('quaternary-shade')};
+  --color: #{get-color('quaternary-shade')};
 }
 
 // Pull in blocks

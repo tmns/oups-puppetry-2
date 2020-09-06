@@ -8,8 +8,8 @@ $outputTokenCSS: false;
 @import '../../node_modules/gorko/gorko.scss';
 
 .print-me {
-  --separator-color: #{get-color('secondary-shade')};
-  --border-color: #{get-color('quinary-glare')};
+  --background-color: #{get-color('secondary-shade')};
+  --color: #{get-color('quinary-glare')};
 
   ul {
     @include media-query('md') {

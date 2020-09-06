@@ -3,5 +3,5 @@
   top: 1px; // Fix weird off-by-1 issue in Chrome.
   left: 0;
   transform: translateY(-100%);
-  fill: var(--separator-color);
+  fill: var(--background-color);
 }

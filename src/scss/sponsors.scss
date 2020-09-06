@@ -8,8 +8,8 @@ $outputTokenCSS: false;
 @import '../../node_modules/gorko/gorko.scss';
 
 .sponsors {
-  --separator-color: #{get-color('dark-shade')};
-  --border-color: #{get-color('primary-glare')};
+  --background-color: #{get-color('dark-shade')};
+  --color: #{get-color('primary-glare')};
   --flow-space: 1.77vw;
 
   img {
@@ -17,7 +17,7 @@ $outputTokenCSS: false;
       width: 50%;
     }
     margin: 0 auto;
-    border: 2px dashed var(--border-color);
+    border: 2px dashed var(--color);
     padding: 1rem;
     width: 80%;
   }

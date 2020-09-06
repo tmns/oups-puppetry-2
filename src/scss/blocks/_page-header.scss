@@ -63,7 +63,7 @@
   }
 
   &__heading {
-    --border-color: #{get-color('dark')};
+    --color: #{get-color('dark')};
     transform: rotate(-2deg);
     margin: -3.5rem 0 5rem;
     text-align: center;
@@ -87,7 +87,7 @@
   }
 
   &__summary {
-    --border-color: #{get-color('light')};
+    --color: #{get-color('light')};
     transform: rotate(-2deg);
     margin-top: 19vw;
     padding: 7vw 4vw;

@@ -8,10 +8,8 @@ $outputTokenCSS: false;
 @import '../../node_modules/gorko/gorko.scss';
 
 .gallery {
-  --separator-color: #{get-color('quaternary-shade')};
   --background-color: #{get-color('quaternary-shade')};
-  --border-color: #{get-color('dark')};
-  --text-color: #{get-color('dark')};
+  --color: #{get-color('dark')};
 }
 
 // Pull in blocks

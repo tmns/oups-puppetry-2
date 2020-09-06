@@ -2,7 +2,7 @@
 
 .gallery {
   background-color: var(--background-color);
-  color: var(--text-color);
+  color: var(--color);
 
   ul {
     display: grid;
@@ -12,7 +12,7 @@
     list-style: none;
 
     li {
-      border: 2px dashed var(--border-color);
+      border: 2px dashed var(--color);
     }
 
     img {

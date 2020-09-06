@@ -1,5 +1,5 @@
 .site-foot {
-  --separator-color: #{get-color('tertiary')};
+  --background-color: #{get-color('tertiary')};
   position: relative;
   padding: get-size('500') 0 get-size('700') 0;
   text-align: center;

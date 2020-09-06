@@ -3,8 +3,8 @@
     border-top-width: 1rem;
     border-bottom-width: 1rem;
   }
-  border-top: 0.75rem dashed var(--border-color);
-  border-bottom: 0.75rem dashed var(--border-color);
+  border-top: 0.75rem dashed var(--color);
+  border-bottom: 0.75rem dashed var(--color);
   padding: 7vw 0 !important;
 
   + .dashed-section {

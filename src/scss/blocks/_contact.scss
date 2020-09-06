@@ -1,6 +1,5 @@
 .contact {
-  --separator-color: #{get-color('light-shade')};
-  --border-color: #{get-color('tertiary-shade')};
+  --background-color: #{get-color('light-shade')};
   --color: #{get-color('tertiary-shade')};
 
   .section-heading {
@@ -42,7 +41,7 @@
     input,
     textarea {
       display: inline-block;
-      border: 2px dashed var(--border-color);
+      border: 2px dashed var(--color);
       background: transparent;
       padding: 1vw;
       width: 100%;
