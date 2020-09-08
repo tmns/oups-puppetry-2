@@ -14,7 +14,9 @@ $outputTokenCSS: false;
     }
   }
   display: none;
-  margin: 0 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(50%);
   border: medium none;
   border-radius: 5px;
   background: transparent none repeat scroll 0% 0%;
