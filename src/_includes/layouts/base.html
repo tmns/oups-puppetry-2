@@ -24,6 +24,13 @@
       {% endfor %}
     {% endif %}
 
+    {# Add facility for pages to declare an array of javascript paths #}
+    {% if pageJS %}
+      {% for item in pageJS %}
+      <script defer src="/{{ item }}"></script>
+      {% endfor %}
+    {% endif %}
+
     {% if title === 'Gallery' %}
       <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@0.6.2/lite-youtube.js"></script>
     {% endif %}
@@ -41,11 +48,12 @@
 
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function() {
+        // First include the JS for our navbar
         {% set responsiveNavJS %}
         {% include "js/responsiveNav.js" %}
         {% endset %}
 
-        {{ responsiveNavJS | jsmin | safe }}
+        {{ responsiveNavJS | safe }}
 
         {% if pageCriticalJS %}
         // Now, any JS needed for the specific page we are on
@@ -53,8 +61,8 @@
         {% set js %}
         {% include file %}
         {% endset %}
-        
-        {{ js | jsmin | safe }}
+
+        {{ js | safe }}
         {% endfor %}
         {% endif %}
       });
