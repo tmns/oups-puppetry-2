@@ -9,6 +9,10 @@
   text-decoration: none;
   color: var(--color);
 
+  &.small {
+    padding: .3rem 1rem;
+  }
+
   &:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 var(--color);

@@ -1,43 +1,38 @@
 <a class="[ skip-link ] [ button ]" href="#main-content">Πηγαίνετε στα περιοχόμενα</a>
 <header class="[ site-head ] [ bg-primary-glare color-secondary-shade ]">
-  <div class="wrapper">
-    <nav class="[ nav ] [ site-head__nav ] [ weight-bold ]" aria-label="Primary">
-      <a href="/" aria-label="{{ site.name }} - home" class="site-head__brand">
-        {% include "partials/brand.svg" %}
-      </a>
-      <div class="nav__list">
-        <ul>
-          {% for item in navigation.items %}
-          <li class="{{'nav__list-item-hidden' if item.inMoreMenu}}" data-index={{ loop.index0 }}>
-            <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div class="[ nav__more-option ] [ weight-bold ]">
-        <a href="#nav__more" role="button" aria-haspopup="true" aria-expanded="false">
+  <a class="site-head__brand" aria-label="{{ site.name }} - home" href="/">
+    {% include "partials/brand.svg" %}
+  </a>
+  <nav class="[ main-nav ] [ weight-bold ]" aria-label="Primary">
+    <ul class="main-nav__primary">
+      {% for item in navigation.items %}
+      <li class="nav-item nav-item-{{ loop.index }}">
+        <a class="nav-item-link" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+      </li>
+      {% endfor %}
+      <li class="nav-item main-nav-more-item">
+        <button class="[ main-nav-more-item__button ] [ button small border ]" aria-haspopup="true" aria-expanded="false">
           <span class="visually-hidden">Άλλα</span>
           <span class="nav__more-option-text" aria-hidden="true">
-            Άλλα
-            <span class="pyramid" aria-hidden="true">▾</span>
+            Άλλα <span class="pyramid" aria-hidden="true">▾</span>
           </span>
-        </a>
-      </div>        
-    </nav>
-    <div id="nav__more" class="[ nav__more ] [ weight-bold ]" style="display: none;">
-      <ul class="nav__more-list">
-        {% for item in navigation.items %}
-        <li class="{{'nav__more-item-hidden' if not item.inMoreMenu}}">
-          <a href="{{ item.url }}">{{ item.text }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </div> 
-    {% if page.url === '/' %}
-    <button class="sound-btn" aria-label="Ενεργοποίηση 'Ηχου" title="Ενεργοποίηση 'Ηχου">
-      <svg class="sound-off" width="20" height="20" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-      <svg class="sound-on" width="20" height="20" style="display: none;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-    </button>
-    {% endif %}
-  </div>  
+        </button>
+      </li>
+    </ul>     
+  </nav>
+  <nav class="[ secondary-nav ] [ weight-bold ]">
+    <ul class="main-nav__secondary">
+      {% for item in navigation.items %}
+      <li class="nav-item nav-item-{{ loop.index }}">
+        <a class="nav-item-link" href="{{ item.url }}" tabindex="-1">{{ item.text }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav> 
+  {% if page.url === '/' %}
+  <button class="sound-btn" aria-label="Ενεργοποίηση 'Ηχου" title="Ενεργοποίηση 'Ηχου">
+    <svg class="sound-off" width="20" height="20" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    <svg class="sound-on" width="20" height="20" style="display: none;" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+  </button>
+  {% endif %}
 </header>

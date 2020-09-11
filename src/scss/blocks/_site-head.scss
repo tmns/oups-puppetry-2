@@ -1,25 +1,29 @@
 .site-head {
-  @include media-query('md') {
-    &__brand {
-      svg {
-        width: 105px;
-      }
-    }
+  @include media-query('lg') {
+    grid-template-columns: min-content minmax(140px, 2fr) 0 minmax(50px, 100px);    
   }
-  padding: get-size('800') 0;
+  display: grid;
+  position: relative;
+  grid-template-columns: min-content minmax(140px, 2fr) 0;
+  align-items: center;
+  column-gap: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2rem 1em;
+  max-width: 100rem;
 
   &__brand {
+    display: block;
     transform: rotate(-10deg);
     padding-inline-start: get-size('600');
     margin-inline-end: get-size('600');
 
     svg {
+      @include media-query('md') {
+        width: 105px;
+      }
       width: 80px;
       fill: get-color('secondary-shade');
     }
-  }
-
-  &__nav {
-    padding: get-size('300') 0;
   }
 }
