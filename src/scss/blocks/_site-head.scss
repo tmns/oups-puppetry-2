@@ -2,6 +2,7 @@
   @include media-query('lg') {
     grid-template-columns: min-content minmax(140px, 2fr) 0 minmax(50px, 100px);    
   }
+  display: -ms-grid;
   display: grid;
   position: relative;
   grid-template-columns: min-content minmax(140px, 2fr) 0;

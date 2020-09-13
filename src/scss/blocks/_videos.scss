@@ -3,6 +3,7 @@
   --color: #{get-color('light')};
 
   ul {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
     grid-gap: 3rem;

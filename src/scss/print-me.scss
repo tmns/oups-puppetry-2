@@ -15,6 +15,7 @@ $outputTokenCSS: false;
     @include media-query('md') {
       grid-template-columns: 1fr 1fr;
     }
+    display: -ms-grid;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2.36vw;
