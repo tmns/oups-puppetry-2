@@ -2,6 +2,7 @@
   // First some JS for a our responsive nav...
   var moreNavBtn = document.querySelector('.main-nav-more-item__button')
   var secondaryNav = document.querySelector('.main-nav__secondary')
+  var secondaryNavLinks = secondaryNav.querySelectorAll('a')
 
   // Now, we continue on with setting up the functionality of
   // the `more` menuu item (ie, opening / closing it).
@@ -20,25 +21,25 @@
     var open = Array.from(secondaryNav.classList).indexOf('js-show-secondary') !== -1
     secondaryNav.classList.toggle('js-show-secondary')
 
-    // Move focus to the expanded menu
-    if (!open) {
-      firstMenuItem.focus()
-    }
-  })
+    // Move focus to the expanded and toggle tabindex values
+    var focused = false;
+    Array.prototype.forEach.call(secondaryNavLinks, function (link) {
+      if (!open && !focused && getComputedStyle(link.parentElement).display === 'flex') {
+        link.focus();
+        focused = true;
+      }
 
-  // Ensure link behaves like a <button> by activating click events on SPACE
-  moreNavBtn.addEventListener('keydown', function(e) {
-    if (e.keyCode === 32) {
-      e.preventDefault()
-      moreNavBtn.click()
-    }
+      link.setAttribute('tabindex', open ? -1 : 0)
+    })
   })
 
   // Ensure user can close more menu by pressing ESC
-  moreNavBtn.addEventListener('keydown', function(e) {
+  secondaryNav.addEventListener('keydown', function(e) {
     if (e.keyCode === 27) {
       e.preventDefault()
-      moreNavBtn.click()
+      moreNavBtn.setAttribute('aria-expanded', false)
+      secondaryNav.classList.remove('js-show-secondary')
+      moreNavBtn.focus()
     }
   })
 })()
