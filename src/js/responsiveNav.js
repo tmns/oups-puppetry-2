@@ -1,4 +1,4 @@
-(function () {
+;(function() {
   // First some JS for a our responsive nav...
   var moreNavBtn = document.querySelector('.main-nav-more-item__button')
   var secondaryNav = document.querySelector('.main-nav__secondary')
@@ -18,15 +18,20 @@
     moreNavBtn.setAttribute('aria-expanded', !expanded)
 
     // Toggle open state
-    var open = Array.from(secondaryNav.classList).indexOf('js-show-secondary') !== -1
+    var open =
+      Array.from(secondaryNav.classList).indexOf('js-show-secondary') !== -1
     secondaryNav.classList.toggle('js-show-secondary')
 
     // Move focus to the expanded and toggle tabindex values
-    var focused = false;
-    Array.prototype.forEach.call(secondaryNavLinks, function (link) {
-      if (!open && !focused && getComputedStyle(link.parentElement).display === 'flex') {
-        link.focus();
-        focused = true;
+    var focused = false
+    Array.prototype.forEach.call(secondaryNavLinks, function(link) {
+      if (
+        !open &&
+        !focused &&
+        getComputedStyle(link.parentElement).display === 'flex'
+      ) {
+        link.focus()
+        focused = true
       }
 
       link.setAttribute('tabindex', open ? -1 : 0)
@@ -40,6 +45,19 @@
       moreNavBtn.setAttribute('aria-expanded', false)
       secondaryNav.classList.remove('js-show-secondary')
       moreNavBtn.focus()
+    }
+  })
+
+  // Close more menu when user clicks outside of it
+  document.addEventListener('click', function(e) {
+    var open =
+      Array.from(secondaryNav.classList).indexOf('js-show-secondary') !== -1
+
+    if (
+      open &&
+      (!moreNavBtn.contains(e.target) && !secondaryNav.contains(e.target))
+    ) {
+      moreNavBtn.click()
     }
   })
 })()
