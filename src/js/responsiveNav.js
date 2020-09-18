@@ -4,12 +4,6 @@
   var secondaryNav = document.querySelector('.main-nav__secondary')
   var secondaryNavLinks = secondaryNav.querySelectorAll('a')
 
-  // Now, we continue on with setting up the functionality of
-  // the `more` menuu item (ie, opening / closing it).
-  var firstMenuItem = secondaryNav.querySelector(
-    'a[href], button:not([disabled]), input'
-  )
-
   moreNavBtn.addEventListener('click', function(e) {
     e.preventDefault()
 
@@ -36,28 +30,30 @@
 
       link.setAttribute('tabindex', open ? -1 : 0)
     })
+
+    if (!open) {
+      // Ensure user can close more menu by pressing ESC
+      secondaryNav.addEventListener('keydown', closeOnEsc)
+      // Close more menu when user clicks outside of it
+      document.addEventListener('click', closeOnOutsideClick)
+    } else {
+      secondaryNav.removeEventListener('keydown', closeOnEsc)
+      document.removeEventListener('click', closeOnOutsideClick)
+    }
   })
 
-  // Ensure user can close more menu by pressing ESC
-  secondaryNav.addEventListener('keydown', function(e) {
+  function closeOnEsc(e) {
     if (e.keyCode === 27) {
       e.preventDefault()
       moreNavBtn.setAttribute('aria-expanded', false)
       secondaryNav.classList.remove('js-show-secondary')
       moreNavBtn.focus()
     }
-  })
+  }
 
-  // Close more menu when user clicks outside of it
-  document.addEventListener('click', function(e) {
-    var open =
-      Array.from(secondaryNav.classList).indexOf('js-show-secondary') !== -1
-
-    if (
-      open &&
-      (!moreNavBtn.contains(e.target) && !secondaryNav.contains(e.target))
-    ) {
+  function closeOnOutsideClick(e) {
+    if (!moreNavBtn.contains(e.target) && !secondaryNav.contains(e.target)) {
       moreNavBtn.click()
     }
-  })
+  }
 })()
