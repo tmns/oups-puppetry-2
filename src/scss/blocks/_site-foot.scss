@@ -4,6 +4,11 @@
   padding: get-size('500') 0 get-size('700') 0;
   text-align: center;
 
+  p,
+  a {
+    font-size: clamp(get-size('400'), 1.77vw, get-size('500'));    
+  }
+
   p {
     margin-bottom: 1.33vw;
   }

@@ -3,7 +3,7 @@
   position: relative;
   grid-column: auto;
   min-width: 0;
-  font-size: 1.05em;
+  font-size: clamp(get-size('400'), 1.33vw, get-size('500'));
 
   &__primary {
     display: flex;
@@ -30,9 +30,9 @@
 .nav-item {
   flex-grow: 0;
   align-items: center;
-  margin-inline-start: auto;
   margin-bottom: 0;
   white-space: nowrap;
+  margin-inline-start: auto;
   padding-inline-start: get-size('400');
 
   &-link {
@@ -66,6 +66,7 @@
   position: relative;
   grid-row: auto;
   grid-column: auto;
+  font-size: clamp(get-size('400'), 1.33vw, get-size('500'));
 
   .main-nav__secondary {
     display: none;
@@ -142,77 +143,77 @@
 .main-nav__secondary .nav-item-7,
 .main-nav__secondary .nav-item-8,
 .main-nav__secondary .nav-item-9 {
- display:flex
+ display:flex;
 }
 @media (min-width:30em) {
  .nav-item-1 {
-  display:flex
+  display:flex;
  }
  .main-nav__secondary .nav-item-1 {
-  display:none
+  display:none;
  }
 }
 @media (min-width:39.6875em) {
  .nav-item-2 {
-  display:flex
+  display:flex;
  }
  .main-nav__secondary .nav-item-2 {
-  display:none
+  display:none;
  }
 }
 @media (min-width:47.6875em) {
  .nav-item-3 {
-  display:flex
+  display:flex;
  }
  .main-nav__secondary .nav-item-3 {
-  display:none
+  display:none;
  }
 }
 @media (min-width:53.5625em) {
  .nav-item-4 {
-  display:flex
+  display:flex;
  }
  .main-nav__secondary .nav-item-4 {
-  display:none
+  display:none;
  }
 }
 @media (min-width:67.8125em) {
  .nav-item-5 {
-  display:flex
+  display:flex;
  }
  .main-nav__secondary .nav-item-5 {
-  display:none
+  display:none;
  }
 }
 @media (min-width:77.5em) {
  .nav-item-6 {
-  display:flex
+  display:flex;
  }
  .main-nav__secondary .nav-item-6 {
-  display:none
+  display:none;
  }
 }
 @media (min-width:88.6875em) {
  .nav-item-7 {
-  display:flex
+  display:flex;
  }
  .main-nav__secondary .nav-item-7 {
-  display:none
+  display:none;
  }
 }
 @media (min-width:95.25em) {
  .nav-item-8 {
-  display:flex
+  display:flex;
  }
  .main-nav__secondary .nav-item-8 {
-  display:none
+  display:none;
  }
 }
 @media (min-width:104.4375em) {
  .nav-item-9 {
-  display:flex
+  display:flex;
  }
  .main-nav__secondary .nav-item-9 {
-  display:none
+  display:none;
  }
 }
