@@ -1,6 +1,6 @@
 .site-head {
   @include media-query('lg') {
-    grid-template-columns: min-content minmax(140px, 2fr) 0 minmax(50px, 100px);    
+    grid-template-columns: min-content minmax(140px, 2fr) 0 50px;    
   }
   display: -ms-grid;
   display: grid;
