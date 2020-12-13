@@ -45,7 +45,7 @@ h2,
 h3,
 h4 {
   @include apply-utility('leading', 'flat');
-  font-weight: 900;
+  font-weight: 700;
 }
 
 // High contrast selection because it can help visually-impaired
