@@ -3,7 +3,7 @@
     {
       "svg": "partials/characters/1.svg",
       "url": "/gallery/",
-      "animation": "wobble"
+      "animation": "shake"
     },
     {
       "svg": "partials/characters/2.svg",
@@ -18,7 +18,7 @@
     {
       "svg": "partials/characters/4.svg",
       "url": "/seminars/",
-      "animation": "swing"
+      "animation": "wobble"
     },
     {
       "svg": "partials/characters/5.svg",
@@ -38,7 +38,7 @@
     {
       "svg": "partials/characters/8.svg",
       "url": "/about/",
-      "animation": "shake"
+      "animation": "swing"
     }
   ]
 }
