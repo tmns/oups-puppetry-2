@@ -18,9 +18,13 @@
       border: 2px dashed #{get-color('light-shade')};
 
       img {
-        @include image-clip-path.apply-class('about__intro--image', 2)
-      ;
-        width: 100%;}      
+        @include image-clip-path.apply-class('about__intro--image', 2);
+        width: 100%;
+        
+        &:hover {
+          clip-path: none;
+        }
+      }      
     }
 
     figure + p {
